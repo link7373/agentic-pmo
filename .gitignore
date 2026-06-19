@@ -1,0 +1,38 @@
+# Source material — never commit private reference documents
+Books/
+
+# Generated PMO artifacts may contain confidential product/roadmap data.
+# This template tracks the folder READMEs (the structure) but ignores generated
+# content. Uncomment to keep your own artifacts in git, or commit selectively.
+# knowledge/prds/*
+# knowledge/sprints/*
+# knowledge/projects/*
+# knowledge/launches/*
+# knowledge/ceremonies/*
+# !knowledge/**/README.md
+
+# Secrets / environment files
+.env
+.env.*
+*.env
+secrets.*
+*.key
+*.pem
+
+# Python (if any local tooling is added)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Node (if any local tooling is added)
+node_modules/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
