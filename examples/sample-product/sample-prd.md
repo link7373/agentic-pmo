@@ -1,4 +1,8 @@
 # PRD: Auto-detected blocker flags (example — "Cadence")
+
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
 Status: In review   ·   Owner: product-manager   ·   Date: 2026-06-19
 Links: product-context (Cadence) · roadmap "Now" item · discovery: blocker-trust interviews
 

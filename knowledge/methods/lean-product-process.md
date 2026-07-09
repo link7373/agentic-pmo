@@ -1,5 +1,9 @@
 # Method: Lean Product Process (Achieving Product-Market Fit)
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Product-market fit means you've built something a well-defined group of customers genuinely needs and
 values. The lean approach reaches fit through a disciplined sequence and tight build-measure-learn loops,
 minimizing wasted effort on the wrong product.

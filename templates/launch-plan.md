@@ -28,3 +28,9 @@ Launch tier: 1 (major) | 2 (notable) | 3 (minor)
 
 ## Post-launch review (fill in after)
 <Did we hit success metrics? What did we learn? What's next?>
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

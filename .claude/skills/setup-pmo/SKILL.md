@@ -40,3 +40,9 @@ The bootstrap workflow. Turns the filled-in `START-HERE.md` charter into a worki
 
 ## Output
 Seeded `knowledge/*` files and a readiness summary.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

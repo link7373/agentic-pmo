@@ -1,5 +1,9 @@
 # Product Context (example — "Cadence")
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 > What `/setup-pmo` + `/define-strategy` would seed from the filled charter.
 
 ## Product / Portfolio

@@ -30,3 +30,9 @@ Discovery artifact (research plan, synthesized findings, personas — use `templ
 learnings); reflect key
 learnings into `knowledge/product-context.md`; log validation decisions to `knowledge/decision-log.md`.
 Follow `standards/document-standards.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

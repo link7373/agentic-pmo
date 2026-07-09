@@ -25,3 +25,9 @@ _Continuous / weekly / monthly / major releases._
 
 ## Calendar & key dates
 _Working calendar, timezone, fiscal calendar, fixed milestones/deadlines._
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

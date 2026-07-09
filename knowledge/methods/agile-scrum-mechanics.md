@@ -1,5 +1,9 @@
 # Method: Agile & Scrum Mechanics
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Scrum is a lightweight framework for delivering value iteratively under uncertainty. It rests on
 **empiricism** — make decisions from what is observed, in short cycles — and works best when the
 team adapts the framework to its context rather than following it ritualistically.

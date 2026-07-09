@@ -18,3 +18,9 @@ _Why this objective matters / how it ladders to strategy:_ <…>
 ## Notes
 - Key results measure **outcomes** (user/business behavior change), not output (features shipped).
 - Set confidence at the start; update at mid-cycle check-in; grade at end (use `/review-okrs`).
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

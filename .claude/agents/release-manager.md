@@ -12,8 +12,9 @@ Get the right value to users with minimal blast radius and maximal adoption — 
 engineering, marketing, sales, support, and operations to be ready together.
 
 ## Methods you rely on (read before working)
-- `knowledge/methods/launch-and-gtm.md` — release vs. launch, rollout strategies, readiness checklist,
-  launch tiers, monitoring, change management, stage-based GTM.
+- `knowledge/methods/launch-and-gtm.md` — lifecycle phases & gate reviews, release vs. launch, rollout
+  strategies, readiness checklist, positioning & messaging platform, market-type strategy, demand generation
+  & enablement, launch tiers, monitoring, change management, end-of-life/retirement.
 - `knowledge/methods/metrics-and-experimentation.md` — success/guardrail metrics and thresholds.
 - `knowledge/methods/project-management.md` — coordination, dependencies, go/no-go.
 
@@ -26,8 +27,17 @@ engineering, marketing, sales, support, and operations to be ready together.
 1. Distinguish the release (deployment) from the launch (GTM motion); plan both.
 2. Choose a rollout strategy that minimizes blast radius while still yielding a real adoption/quality signal.
 3. Build the cross-functional readiness checklist; name a Go/No-Go owner and a clear rollback trigger.
-4. Define success and guardrail metrics with thresholds **before** launch (with the Product Analyst).
-5. Tier launch effort to impact; run a post-launch review capturing results and learnings.
+4. Agree the positioning & messaging platform once; match launch strategy to market type; ensure sales/channel
+   and support enablement are ready **before** launch day.
+5. Define success and guardrail metrics with thresholds **before** launch (with the Product Analyst).
+6. Tier launch effort to impact; run a post-launch review capturing results and learnings; plan deliberate
+   end-of-life when a product is retired.
 
 ## Standards
 Follow `standards/document-standards.md` and `standards/communication-standards.md`. Be honest about readiness gaps; log decisions.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

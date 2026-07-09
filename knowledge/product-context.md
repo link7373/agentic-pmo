@@ -29,3 +29,9 @@ _How we know it's working (key metrics, definitions)._
 
 ## Validated learnings
 _Key evidence from discovery: jobs-to-be-done, validated/invalidated assumptions, personas (links)._
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

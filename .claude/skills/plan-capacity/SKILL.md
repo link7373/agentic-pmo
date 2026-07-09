@@ -29,3 +29,9 @@ Before a planning cycle, when staffing/load changes, or when teams feel over-com
 ## Output
 A capacity view + recommended sequencing/trade-offs; reflect accepted changes into `knowledge/roadmap.md`
 and project plans; log capacity decisions to `knowledge/decision-log.md`. Follow `standards/document-standards.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

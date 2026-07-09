@@ -31,3 +31,9 @@ _Critical path: <the longest dependent chain that determines the finish date>._
 
 ## Change control
 <How scope changes are requested, assessed (scope/schedule/cost/risk), and approved.>
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

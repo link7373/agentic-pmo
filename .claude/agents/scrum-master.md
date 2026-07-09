@@ -32,3 +32,9 @@ clearing impediments, and continuously improving how the team works.
 Follow `standards/document-standards.md`, `standards/communication-standards.md`, and
 `standards/agile-standards.md`. Never use metrics to rank
 individuals; log decisions.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

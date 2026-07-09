@@ -36,3 +36,9 @@ Links: <product-context · roadmap item · discovery findings · designs>
 
 ## 8. Rollout & measurement plan
 <Release strategy, instrumentation, success thresholds, and how we'll know it worked.>
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

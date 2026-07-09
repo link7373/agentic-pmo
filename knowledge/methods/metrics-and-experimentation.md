@@ -1,5 +1,9 @@
 # Method: Metrics & Experimentation
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Metrics tell us whether the product is creating value and whether our bets are working. Experimentation lets
 us learn causally and cheaply before committing. Measure **outcomes** (changes in user/business behavior),
 not just **output** (things shipped). A few well-chosen metrics beat a dashboard nobody reads.
@@ -49,8 +53,17 @@ Manage by evidence: form a hypothesis, run a small experiment, measure, decide �
 Decide what to measure *before* launch and instrument it as part of the work, not after. Define each event
 and metric precisely (a shared metrics catalog) so numbers mean the same thing to everyone.
 
+## KPIs & the balanced scorecard
+
+- **KPIs** — the handful of indicators that show whether an objective is being met. A good KPI is specific,
+  measurable, owned, tied to a target and timeframe, and something a team can actually influence.
+- **Balanced scorecard** — for a rounded view of health, track objectives across four perspectives rather than
+  finance alone: **financial**, **customer**, **internal process**, and **learning & growth**. It stops one
+  dimension (usually near-term revenue) from crowding out the others, and links day-to-day measures to strategy.
+
 ## Quality checklist
 - [ ] A clear North Star with guardrail/counter-metrics; teams know their input metric.
+- [ ] KPIs are owned, targeted, and influenceable; scorecard balances more than finance.
 - [ ] Metrics are actionable and segmented, not vanity averages.
 - [ ] Experiments state hypothesis + success threshold up front and respect significance.
 - [ ] Instrumentation is planned before launch; definitions are shared and consistent.

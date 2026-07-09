@@ -1,5 +1,9 @@
 # Method: Requirements & User Stories
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Requirements communicate intent — what to build and why — so a team can build the right thing. Good
 requirements describe the **problem and desired outcome**, leaving room for the team to find the best
 solution. They are living artifacts, refined continuously, not frozen specs thrown over a wall.
@@ -22,6 +26,21 @@ A lightweight PRD for a feature/initiative typically covers:
 8. **Rollout & measurement plan** — release strategy, instrumentation, success thresholds.
 
 Keep it as short as it can be while still aligning the team. Favor clarity over completeness.
+
+## Classifying requirements
+
+Keep different *kinds* of requirement distinct — mixing them muddies scope and priority:
+- **Business** (the *why* / outcome) → **stakeholder** (what a group needs) → **solution** (what to build:
+  **functional** behaviors + **non-functional** quality attributes) → **transition** (temporary needs to get
+  from today's state to the new one — migration, training, cutover).
+
+See `business-analysis.md` for the full schema, elicitation techniques, and traceability.
+
+## Non-functional requirements (quality attributes)
+
+Don't let quality attributes stay implicit — they drive architecture and are costly to retrofit. Specify
+measurable targets for performance, availability, security, privacy, usability, accessibility, compatibility,
+maintainability, and compliance. "Fast" is a wish; "p95 < 300 ms at 1,000 concurrent users" is a requirement.
 
 ## User stories
 
@@ -49,6 +68,24 @@ Define "done" for the story in verifiable terms. Two common styles:
 Cover the happy path, key edge cases, and error states. Criteria are the basis of testing and the
 definition of done for the item.
 
+## Use cases & scenarios (when a story isn't enough)
+
+For interactions with many steps, actors, or branches, a **use case** captures the goal, the primary actor,
+preconditions, the main success scenario (numbered steps), and alternate/exception flows. Use it to
+complement — not replace — user stories when the flow is too rich for a single card. A **scenario** is one
+concrete path through the interaction; enumerate the important ones (success, alternates, failures).
+
+## Verify vs. validate
+
+- **Verify** a requirement is well-formed — clear, consistent, feasible, testable, unambiguous (built right).
+- **Validate** it delivers the intended value and traces to a real business need (right thing).
+
+## Traceability
+
+Link each requirement backward to the need/goal it serves and forward to the design, build, and test that
+satisfy it. Traceability enables impact analysis when things change and coverage checks before release. See
+`business-analysis.md`.
+
 ## Epics, features, stories, tasks
 - **Epic** — a large body of work spanning many stories / multiple sprints; often a theme on the roadmap.
 - **Feature / capability** — a coherent chunk of user-facing value within an epic.
@@ -71,6 +108,8 @@ definition of done for the item.
 - [ ] Stories pass INVEST; oversized ones are split into thin end-to-end slices.
 - [ ] Every story has testable acceptance criteria covering happy path, edges, and errors.
 - [ ] PRD names what's out of scope and the success metric, not just what's in.
+- [ ] Requirement kinds are kept distinct; non-functional attributes are specified with measurable targets.
+- [ ] Requirements are traceable to a need and both verified and validated.
 
 ## Related methods
-- [[agile-scrum-mechanics]] · [[discovery-and-validation]] · [[lean-product-process]] · [[prioritization-frameworks]]
+- [[business-analysis]] · [[agile-scrum-mechanics]] · [[discovery-and-validation]] · [[lean-product-process]] · [[prioritization-frameworks]]

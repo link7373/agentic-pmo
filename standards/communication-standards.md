@@ -1,5 +1,9 @@
 # Standards: Communication
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 How the PMO communicates with different audiences. Match the message to the reader's altitude and the
 decision they need to make. The same facts get framed very differently for an executive, a customer, and
 an engineering team.

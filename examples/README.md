@@ -1,5 +1,9 @@
 # Examples
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 A worked sample so you can see the quality bar before running your own. **Nothing here is wired into the
 live PMO** — the real PMO reads from `knowledge/`, not `examples/`. Use these to calibrate what good output
 looks like, then delete or ignore.

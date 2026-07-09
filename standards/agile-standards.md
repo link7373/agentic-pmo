@@ -1,5 +1,9 @@
 # Standards: Agile Delivery
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Conventions for backlog items, estimation, and the agile cadence. These are house defaults; confirm and
 tune them during `/setup-pmo` to match the team's methodology and tools. Mechanics live in
 `knowledge/methods/agile-scrum-mechanics.md`; this file is the team's agreed conventions.

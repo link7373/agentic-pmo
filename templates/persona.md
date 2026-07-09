@@ -22,3 +22,9 @@ Owner: discovery-researcher   ·   Based on: <research basis — interviews, dat
 
 ## Evidence
 <Key quotes / data points this persona is grounded in. Behavior-based, not assumed.>
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

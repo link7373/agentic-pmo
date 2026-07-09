@@ -21,3 +21,9 @@ _Who has final say on scope, priorities, budget, and go/no-go._
 
 ## Dynamics / notes
 _Anything tricky about stakeholder relationships to keep in mind._
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

@@ -1,5 +1,9 @@
 # Method: Product Strategy
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Product strategy is the bridge between a company's vision and the day-to-day work of building.
 It answers: **who** we serve, **what** value we create for them, **why** we win, and **how** we'll
 measure success. A good strategy makes prioritization decisions easy because it tells you what to say no to.
@@ -45,6 +49,40 @@ Capture the economic logic on one page:
 Size **bottom-up** (units × price × reachable customers) where possible — it's more credible than top-down
 percentages of a giant number. State assumptions explicitly so they can be challenged.
 
+## Levels of a product
+
+A product is more than its features. Design and position all three layers:
+- **Core** — the fundamental benefit/job the customer is really buying.
+- **Actual** — the tangible product: features, quality, design, brand.
+- **Augmented** — everything around it: onboarding, support, docs, warranty, community, ecosystem.
+Competitors often match the actual product; differentiation and retention are frequently won at the augmented layer.
+
+## Product lifecycle (and why strategy changes by stage)
+
+Products move through stages, and the right strategy differs at each:
+- **Introduction** — prove value, drive awareness and first adoption; expect losses.
+- **Growth** — scale adoption, widen the moat, invest in differentiation; watch for fast-followers.
+- **Maturity** — defend share, optimize margin, extend via new segments/features; competition is fiercest.
+- **Decline** — harvest, reposition, or retire deliberately (see end-of-life in `launch-and-gtm.md`).
+Know which stage each product is in; managing a mature product like a new one (or vice versa) wastes capital.
+
+## Market segmentation & targeting
+
+Divide the market into segments with shared needs and behavior, then choose which to serve:
+- Segment by need, job-to-be-done, behavior, or firmographic/demographic traits — needs and jobs beat
+  demographics for product decisions.
+- Evaluate each segment's size, growth, reachability, and fit with your advantage; **target** the few you can
+  win and **position** distinctly for each (see Positioning above).
+Serving "everyone" is a non-strategy; a sharp beachhead segment usually beats a diffuse broad play.
+
+## Innovation types & the portfolio
+
+- **Innovation types** — **incremental** (improve the core), **adjacent** (new segment/use of existing
+  strengths), and **disruptive/breakthrough** (new market or model). Balance the mix; don't fund only safe bets.
+- **Portfolio management** — across multiple products/bets, balance risk, lifecycle stage, and resource draw.
+  Classify by market growth × relative strength (star / cash-cow / question-mark / low-priority) and fund
+  deliberately: milk the cash cows, back the stars, test the questions, retire the laggards.
+
 ## OKRs (objectives & key results)
 
 - **Objective** — qualitative, ambitious, time-boxed ("Make onboarding effortless for new teams").
@@ -68,4 +106,4 @@ percentages of a giant number. State assumptions explicitly so they can be chall
 - [ ] Market size is built bottom-up with stated assumptions.
 
 ## Related methods
-- [[lean-product-process]] · [[roadmapping]] · [[metrics-and-experimentation]] · [[discovery-and-validation]]
+- [[lean-product-process]] · [[roadmapping]] · [[metrics-and-experimentation]] · [[discovery-and-validation]] · [[launch-and-gtm]]

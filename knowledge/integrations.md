@@ -23,3 +23,9 @@ Jira workflow states) so sync stays consistent._
 ## Setup
 Configured during or after `/setup-pmo`. To enable a tool: connect its MCP connector, then record it above
 with the desired sync direction.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

@@ -24,3 +24,9 @@ _Last reviewed: —_
 | ID | Dependency | Direction (need from / provide to) | Owner | Needed by | Status |
 |----|------------|------------------------------------|-------|-----------|--------|
 |    |            |                                    |       |           |        |
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

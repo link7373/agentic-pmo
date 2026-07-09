@@ -1,5 +1,9 @@
 # Templates
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Fill-in starting points for the PMO's deliverables. Skills copy the relevant template, then populate it and
 save the result to the right `knowledge/` location. Keep these generic; project-specific content lives in
 `knowledge/`, never here.

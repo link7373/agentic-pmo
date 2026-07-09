@@ -33,3 +33,9 @@ deliverable artifact for the audience; log only consequential communication deci
 ## Optional sync
 If `knowledge/integrations.md` configures Slack/Notion, offer to post/share the deliverable there. Skip if
 not configured.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

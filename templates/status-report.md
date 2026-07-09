@@ -23,3 +23,9 @@ Overall: 🟢 Green | 🟡 Amber | 🔴 Red — <one-line reason>
 | Item | R/I | Severity | Owner | Plan |
 |------|-----|----------|-------|------|
 |      |     |          |       |      |
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

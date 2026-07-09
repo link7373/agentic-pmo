@@ -1,5 +1,9 @@
 # Roadmap (example — "Cadence")
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 > A `/build-roadmap` output in Now/Next/Later form. Every item ladders to the Q3 objective "prove teams
 > adopt the daily digest."
 

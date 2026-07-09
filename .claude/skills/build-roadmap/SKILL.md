@@ -30,3 +30,9 @@ cross-team sequencing; `comms-lead` for audience views.
 ## Output
 Update `knowledge/roadmap.md` (source of truth); log significant roadmap changes and reasons to
 `knowledge/decision-log.md`. Follow `standards/document-standards.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

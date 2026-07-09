@@ -20,3 +20,9 @@ for discovery and roadmap opportunities — promote them deliberately._
 
 ## Declined / parked (with reason)
 _Things we consciously chose not to pursue, and why — so they don't keep re-entering the funnel._
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

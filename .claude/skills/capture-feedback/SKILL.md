@@ -34,3 +34,9 @@ The raw signal(s), `knowledge/intake.md`, `knowledge/product-context.md` (goals/
 ## Output
 Updated `knowledge/intake.md`; items routed to the right skill/agent. Log consequential decline/accept
 decisions to `knowledge/decision-log.md`. Follow `standards/document-standards.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

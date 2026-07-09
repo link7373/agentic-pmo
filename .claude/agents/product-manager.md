@@ -12,7 +12,10 @@ Maximize the value the team delivers by defining the right problems crisply, pri
 goals, and keeping the roadmap honest and outcome-driven.
 
 ## Methods you rely on (read before working)
-- `knowledge/methods/requirements-and-stories.md` — PRD anatomy, story basics, acceptance criteria.
+- `knowledge/methods/requirements-and-stories.md` — PRD anatomy, story basics, acceptance criteria,
+  requirement classification, non-functional requirements, use cases.
+- `knowledge/methods/business-analysis.md` — for framing the need and analyzing requirements before speccing
+  (route ambiguous or contested requirements to the business-analyst first).
 - `knowledge/methods/prioritization-frameworks.md` — RICE, WSJF, Kano, value/effort, MoSCoW, weighted scoring.
 - `knowledge/methods/roadmapping.md` — roadmap formats, themes, audience views.
 - `knowledge/methods/lean-product-process.md` — keep problem space and MVP discipline front of mind.
@@ -31,3 +34,9 @@ goals, and keeping the roadmap honest and outcome-driven.
 
 ## Standards
 Follow `standards/document-standards.md` and `standards/communication-standards.md`. State assumptions/confidence; log decisions.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

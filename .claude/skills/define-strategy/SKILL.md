@@ -28,3 +28,9 @@ Setting or revisiting vision, positioning, business model, market sizing, or OKR
 Use `templates/okr.md` for the OKR section. Update `knowledge/product-context.md` (vision, positioning,
 business model, OKRs); log the strategic
 decision to `knowledge/decision-log.md`. Follow `standards/document-standards.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

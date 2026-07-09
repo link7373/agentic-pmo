@@ -16,7 +16,8 @@ Project/sprint plans, `knowledge/backlog.md`, `knowledge/roadmap.md`, `knowledge
 `knowledge/cadence.md`, velocity history.
 
 ## Steps
-1. Roll up progress: milestone/sprint status, velocity trend, burndown/burnup, scope changes.
+1. Roll up progress: milestone/sprint status, velocity trend, burndown/burnup, scope changes; where a
+   cost/schedule baseline exists, add earned-value indices (SPI/CPI) for an objective read on progress.
 2. Compute **RAG per workstream with a reason and an action** — never a bare color.
 3. Detect anomalies/emerging risks (slipping critical path, rising burnup ceiling, stalled items); update
    `knowledge/raid-log.md` with owners.
@@ -33,3 +34,9 @@ and `standards/communication-standards.md`.
 ## Optional sync
 If `knowledge/integrations.md` configures Slack/Notion, offer to post the formatted status there. Files
 remain source of truth; skip if not configured.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

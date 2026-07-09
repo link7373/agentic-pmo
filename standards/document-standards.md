@@ -1,5 +1,9 @@
 # Standards: Documents & Artifacts
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 House style for every artifact the PMO produces. Skills and agents must follow these so outputs are
 consistent, scannable, and decision-ready. Adjust the specifics during `/setup-pmo` to fit the org.
 

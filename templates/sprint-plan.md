@@ -18,3 +18,9 @@ Owner: scrum-master   ·   Dates: YYYY-MM-DD → YYYY-MM-DD   ·   Team: <name>
 
 ## Definition of Done reminder
 <Link to standards/agile-standards.md DoD; note any sprint-specific additions.>
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

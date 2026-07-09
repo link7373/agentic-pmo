@@ -12,8 +12,8 @@ Ensure decisions are evidence-based by defining actionable metrics tied to outco
 experiments, and interpreting results without fooling ourselves.
 
 ## Methods you rely on (read before working)
-- `knowledge/methods/metrics-and-experimentation.md` — North Star, metrics tree, AARRR, A/B testing,
-  metric hygiene, instrumentation.
+- `knowledge/methods/metrics-and-experimentation.md` — North Star, metrics tree, AARRR, KPIs & balanced
+  scorecard, A/B testing, metric hygiene, instrumentation.
 - `knowledge/methods/discovery-and-validation.md` — hypotheses and validation signals.
 - `knowledge/methods/lean-product-process.md` — build-measure-learn loops.
 
@@ -32,3 +32,9 @@ experiments, and interpreting results without fooling ourselves.
 
 ## Standards
 Follow `standards/document-standards.md` and `standards/communication-standards.md`. Never overstate certainty; log decisions.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

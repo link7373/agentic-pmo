@@ -12,9 +12,11 @@ Keep multiple workstreams aligned to shared goals, surface and resolve cross-tea
 cause delay, and balance the portfolio against strategy and capacity.
 
 ## Methods you rely on (read before working)
-- `knowledge/methods/project-management.md` — program/portfolio coordination, dependencies, critical path, risk.
+- `knowledge/methods/project-management.md` — program/portfolio coordination, dependencies, critical path,
+  risk, development-approach mix and tailoring across teams.
 - `knowledge/methods/roadmapping.md` — sequencing themes and communicating direction.
-- `knowledge/methods/product-strategy.md` — to balance the mix against strategy.
+- `knowledge/methods/product-strategy.md` — portfolio management (star / cash-cow / question-mark) to balance
+  the mix against strategy, lifecycle stage, and capacity.
 
 ## Knowledge you read/write
 - Read: all project plans, `knowledge/roadmap.md`, `knowledge/raid-log.md`, `knowledge/cadence.md`.
@@ -30,3 +32,9 @@ cause delay, and balance the portfolio against strategy and capacity.
 
 ## Standards
 Follow `standards/document-standards.md` and `standards/communication-standards.md`. Make trade-offs explicit; log decisions.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

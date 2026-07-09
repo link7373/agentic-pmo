@@ -17,3 +17,9 @@
 ## Metric definitions (pointers)
 Authoritative metric definitions live with the Product Analyst's metrics catalog; this section links to them
 so a term here always resolves to one precise definition.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

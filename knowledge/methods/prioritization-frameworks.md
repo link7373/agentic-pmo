@@ -1,5 +1,9 @@
 # Method: Prioritization Frameworks
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Prioritization allocates scarce capacity to the work that creates the most value per unit of effort, in
 service of the current strategy/goals. No framework replaces judgment — they make trade-offs explicit and
 debatable. Pick the framework that fits the decision; always tie scores back to a goal.
@@ -64,6 +68,16 @@ When multiple criteria matter, define criteria with weights (e.g., strategic fit
 effort 15%, risk 10%), score each item per criterion, and compute the weighted total. Transparent and
 tunable, but only as good as the weights — agree on them up front.
 
+## Prioritization bases (what to weigh)
+
+Whatever framework you use, the underlying factors that move priority are consistent — weigh them explicitly:
+- **Business/customer value** — benefit to the outcome or goal.
+- **Cost / effort** — the investment required.
+- **Risk** — do risky, uncertain, or foundational items early to learn or de-risk (or defer if avoidable).
+- **Dependencies** — enablers must precede the work they unblock; sequence accordingly.
+- **Time sensitivity** — deadlines, market windows, seasonality, cost of delay.
+- **Regulatory / policy** — compliance and contractual obligations can override pure value scoring.
+
 ## Choosing a framework
 - Many features, one goal → **RICE**.
 - Sequencing a flow where timing matters → **WSJF**.
@@ -84,4 +98,4 @@ tunable, but only as good as the weights — agree on them up front.
 - [ ] Output is a ranked, defensible order — not a flat wish list.
 
 ## Related methods
-- [[lean-product-process]] · [[roadmapping]] · [[agile-scrum-mechanics]] · [[product-strategy]]
+- [[lean-product-process]] · [[roadmapping]] · [[agile-scrum-mechanics]] · [[product-strategy]] · [[business-analysis]]

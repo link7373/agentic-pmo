@@ -1,5 +1,9 @@
 # Method: Discovery & Validation
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Discovery is how we reduce the risk of building the wrong thing. We turn assumptions into hypotheses and
 test them with evidence from real customers before committing significant build effort. Validation is
 continuous, not a one-time gate.
@@ -28,6 +32,21 @@ continuous, not a one-time gate.
 - Avoid leading questions; stay silent and let them talk; dig into the *why* behind answers.
 - Separate the **problem interview** (is the problem real and painful?) from the **solution interview**
   (does our approach resonate?).
+
+Interviews are one elicitation technique among many — reach for **observation** (watch real behavior),
+**surveys** (quantify at scale), **workshops/collaborative games** (converge stakeholders fast),
+**document analysis** (mine existing systems and rules), or **prototyping** (make a concept concrete to react
+to) as the question demands. See `business-analysis.md` for matching technique to goal.
+
+## Market & competitive investigation
+
+Discovery isn't only customer conversations — scan the landscape too:
+- **External assessment** — market trends, size and growth, regulation, and technology shifts that open or
+  close opportunity (size the market in `product-strategy.md`).
+- **Competitive analysis / benchmarking** — how alternatives solve the job today (including "do nothing"),
+  and where they're weak. Benchmark against the best, not just direct rivals.
+- **SWOT** — synthesize internal strengths/weaknesses against external opportunities/threats to frame strategy.
+- **Opportunity & threat identification** — name what to pursue and what could undermine the bet, with evidence.
 
 ## Jobs To Be Done (JTBD)
 
@@ -72,4 +91,4 @@ solutions before committing.
 - [ ] Multiple solutions considered per opportunity before committing.
 
 ## Related methods
-- [[lean-product-process]] · [[metrics-and-experimentation]] · [[requirements-and-stories]] · [[product-strategy]]
+- [[lean-product-process]] · [[metrics-and-experimentation]] · [[requirements-and-stories]] · [[product-strategy]] · [[business-analysis]]

@@ -21,7 +21,9 @@ Candidate items (from roadmap, backlog, stakeholders), `knowledge/product-contex
    - many features, one goal → **RICE**; sequencing a flow with timing → **WSJF**;
    - satisfaction strategy / feature mix → **Kano**; quick triage → **value/effort 2×2**;
    - release scope with stakeholders → **MoSCoW**; multi-criteria → **weighted scoring**.
-3. Score each item; record estimates, **confidence**, and assumptions.
+3. Score each item; record estimates, **confidence**, and assumptions. Weigh the underlying bases — value,
+   cost/effort, risk, dependencies, time-sensitivity, and any regulatory/policy constraints that can override
+   pure scoring.
 4. Produce a ranked, defensible order with the rationale.
 
 ## Methods
@@ -31,3 +33,9 @@ Candidate items (from roadmap, backlog, stakeholders), `knowledge/product-contex
 A ranked list with scores and rationale; reflect ordering into `knowledge/roadmap.md` or
 `knowledge/backlog.md` as relevant; log the prioritization decision to `knowledge/decision-log.md`.
 Follow `standards/document-standards.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

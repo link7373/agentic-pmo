@@ -31,3 +31,9 @@ about risk, and impossible to misread.
 
 ## Standards
 Follow `standards/communication-standards.md` and `standards/document-standards.md`. Do not invent data or status — communicate only what the substance supports.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

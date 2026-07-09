@@ -1,5 +1,9 @@
 # Method: Roadmapping
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 A roadmap communicates **where the product is going and why** — it aligns stakeholders on direction and
 priorities. It is a strategic communication artifact, not a delivery commitment or a dated feature factory.
 The best roadmaps are organized around **outcomes and themes**, tied to strategy, and honest about uncertainty.

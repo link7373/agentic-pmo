@@ -25,3 +25,9 @@ This single-file backlog is ideal up to ~50–100 active stories. Beyond that: (
 under `knowledge/backlog/<epic>.md` and keep this file as the epic index, and/or (b) make a configured tool
 (Linear/Jira via `knowledge/integrations.md`) the working store and treat this file as the high-level mirror.
 Pick one approach and record it here so there's a single source of truth.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

@@ -16,3 +16,9 @@ Date: YYYY-MM-DD   ·   Owner: comms-lead   ·   Overall: 🟢 | 🟡 | 🔴
 - <the big rocks for the coming period>
 
 _Detail: <links to roadmap, status report, or canonical knowledge/ artifacts>._
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

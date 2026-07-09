@@ -1,5 +1,9 @@
 # 👋 Start Here — Your Agentic PMO Charter
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 Welcome. This file is the **one thing you fill in** to stand up your virtual Product & Project Management
 Office. Answer in plain English — bullet points, brain dumps, half-formed thoughts are all fine. You don't
 need to know any frameworks or jargon. If you don't know an answer, write "no idea" or leave it blank and

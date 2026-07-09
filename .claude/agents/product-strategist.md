@@ -12,7 +12,8 @@ Turn ambition and evidence into a clear, narrow strategy that makes prioritizati
 the team what to say no to.
 
 ## Methods you rely on (read before working)
-- `knowledge/methods/product-strategy.md` — strategy stack, positioning, business-model canvas, market sizing, OKRs.
+- `knowledge/methods/product-strategy.md` — strategy stack, positioning, business-model canvas, market sizing,
+  levels of product, product lifecycle, segmentation & targeting, innovation types, portfolio management, OKRs.
 - `knowledge/methods/metrics-and-experimentation.md` — North Star, outcome metrics for KRs.
 - `knowledge/methods/roadmapping.md` — so strategy connects cleanly to the roadmap.
 
@@ -25,8 +26,15 @@ the team what to say no to.
 1. Anchor on the vision and the target customer (pull from product-context; flag if missing).
 2. Craft positioning with the standard statement; pressure-test specificity and defensibility.
 3. Frame the business model on one page; size the market bottom-up with stated assumptions.
-4. Set OKRs whose key results measure **outcomes**, not output, and ladder to the strategy.
-5. State the few bets that matter and, explicitly, what you're choosing not to do.
+4. Choose target segments deliberately; account for each product's lifecycle stage and the portfolio mix.
+5. Set OKRs whose key results measure **outcomes**, not output, and ladder to the strategy.
+6. State the few bets that matter and, explicitly, what you're choosing not to do.
 
 ## Standards
 Follow `standards/document-standards.md` and `standards/communication-standards.md`. Be honest about assumptions and confidence; log decisions.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

@@ -1,5 +1,9 @@
 # 🧭 Agentic PMO for Claude Code
 
+> **Created by Colin Beck**<br>
+> LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+> GitHub: https://github.com/link7373
+
 **A self-contained Product & Project Management Office, built from Claude sub-agents and skills.**
 Fill in one charter, run one command, and get a virtual PMO that runs discovery, writes PRDs, prioritizes,
 builds roadmaps, grooms backlogs, plans sprints and projects, tracks status, plans launches, facilitates
@@ -8,8 +12,8 @@ persisted across sessions.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Built for](https://img.shields.io/badge/Built%20for-Claude%20Code-8A2BE2.svg)
-![Agents](https://img.shields.io/badge/Agents-11-blue.svg)
-![Skills](https://img.shields.io/badge/Skills-16-blue.svg)
+![Agents](https://img.shields.io/badge/Agents-12-blue.svg)
+![Skills](https://img.shields.io/badge/Skills-17-blue.svg)
 
 ---
 
@@ -17,8 +21,8 @@ persisted across sessions.
 
 A real PMO is a team of specialists working a shared operating rhythm: strategists, product managers,
 owners, researchers, analysts, project and program managers, scrum masters, release managers. This kit
-recreates that team as **11 role-based agents** coordinated by a **Head of PMO** orchestrator, driven by
-**16 plain-English workflows**, and anchored by a **persistent memory** so decisions and context survive
+recreates that team as **12 role-based agents** coordinated by a **Head of PMO** orchestrator, driven by
+**17 plain-English workflows**, and anchored by a **persistent memory** so decisions and context survive
 across sessions.
 
 You talk to it in business English — *"build me a roadmap," "write a PRD for X," "plan the next sprint,"
@@ -32,8 +36,8 @@ flowchart TD
     A(["👤 You · plain English"]) -->|"fill in once"| B["📋 START-HERE.md — the charter"]
     B -->|"/setup-pmo"| M
     A -->|"requests"| M{{"🧭 Head of PMO — orchestrator (CLAUDE.md)"}}
-    M --> SK[/"16 Skills · workflows"/]
-    SK --> AG["👥 11 Role Agents — product · delivery · cross-cutting"]
+    M --> SK[/"17 Skills · workflows"/]
+    SK --> AG["👥 12 Role Agents — product · delivery · cross-cutting"]
     AG --> ME[("📚 Methods library")]
     AG --> ST[("📐 Standards")]
     AG --> KN[("🧠 knowledge/ — source of truth")]
@@ -51,8 +55,8 @@ flowchart TD
 | Part | What it is |
 |------|------------|
 | 🧭 **Orchestrator** (`CLAUDE.md`) | The Head of PMO — routes requests, sequences multi-step work, runs the operating rhythm, owns final QA. |
-| 👥 **Agents** (`.claude/agents/`) | 11 specialists, each scoped to a role with its own method playbook. |
-| ⚙️ **Skills** (`.claude/skills/`) | 16 slash-command workflows that do the actual jobs. |
+| 👥 **Agents** (`.claude/agents/`) | 12 specialists, each scoped to a role with its own method playbook. |
+| ⚙️ **Skills** (`.claude/skills/`) | 17 slash-command workflows that do the actual jobs. |
 | 🧠 **Knowledge** (`knowledge/`) | Persistent memory — product context, roadmap, backlog, RAID, intake, decisions. The **source of truth**. |
 | 📚📐 **Methods & Standards** | A reusable library of techniques (`knowledge/methods/`) and house style (`standards/`). |
 
@@ -84,7 +88,8 @@ Every workflow chains into the next. A new idea flows from the front door all th
 ```mermaid
 flowchart LR
     F["📥 /capture-feedback"] --> D["🔍 /run-discovery"]
-    D --> P["📝 /write-prd"]
+    D --> E["📐 /elicit-requirements"]
+    E --> P["📝 /write-prd"]
     P --> PR["⚖️ /prioritize"]
     PR --> R["🗺️ /build-roadmap"]
     R --> G["🧾 /groom-backlog"]
@@ -96,7 +101,7 @@ flowchart LR
     RV -. "informs next cycle" .-> R
 ```
 
-## The team — 11 agents
+## The team — 12 agents
 
 **Product**
 
@@ -107,6 +112,7 @@ flowchart LR
 | `product-owner` | Backlog ownership, user stories, acceptance criteria, sprint-readiness |
 | `discovery-researcher` | User/market research, interviews, personas, JTBD, problem/solution validation |
 | `product-analyst` | Metrics, experimentation/A-B testing, product analytics, success measurement |
+| `business-analyst` | Elicitation, requirements analysis/classification, current/future-state & process modeling, traceability, solution evaluation |
 
 **Delivery / project**
 
@@ -124,7 +130,7 @@ flowchart LR
 | `delivery-monitor` | Status/velocity/burndown tracking, risk & anomaly surfacing, RAID & scorecards |
 | `comms-lead` | Stakeholder & executive communications, audience-tailored deliverables |
 
-## The workflows — 16 skills
+## The workflows — 17 skills
 
 | Skill | What it does | Lead agent |
 |-------|--------------|------------|
@@ -133,6 +139,7 @@ flowchart LR
 | `/review-okrs` | Grade OKRs, cycle check-in, carry learnings forward | product-strategist + product-analyst |
 | `/capture-feedback` | Capture & triage inbound signals into the funnel | product-manager |
 | `/run-discovery` | Validate problems; research, personas, JTBD | discovery-researcher |
+| `/elicit-requirements` | Elicit & analyze requirements, model process, classify & trace | business-analyst |
 | `/write-prd` | Product requirements document | product-manager |
 | `/prioritize` | Rank work against goals (RICE / WSJF / Kano / …) | product-manager |
 | `/build-roadmap` | Outcome/theme roadmap (Now / Next / Later) | product-manager + product-strategist |
@@ -150,8 +157,8 @@ flowchart LR
 A shared, reusable set of techniques every agent draws on (`knowledge/methods/`):
 
 `product-strategy` · `lean-product-process` · `discovery-and-validation` · `prioritization-frameworks` ·
-`requirements-and-stories` · `agile-scrum-mechanics` · `project-management` · `roadmapping` ·
-`launch-and-gtm` · `metrics-and-experimentation`
+`requirements-and-stories` · `business-analysis` · `agile-scrum-mechanics` · `project-management` ·
+`roadmapping` · `launch-and-gtm` · `metrics-and-experimentation`
 
 ## Memory & the operating rhythm
 
@@ -203,13 +210,13 @@ agentic-pmo/
 ├─ README.md
 ├─ LICENSE · .gitignore · .gitattributes
 ├─ .claude/
-│  ├─ agents/               # 11 role sub-agents
-│  └─ skills/               # 16 slash-command workflows
+│  ├─ agents/               # 12 role sub-agents
+│  └─ skills/               # 17 slash-command workflows
 ├─ knowledge/               # persistent memory — source of truth
 │  ├─ product-context.md · stakeholder-map.md · roadmap.md · backlog.md
 │  ├─ raid-log.md · cadence.md · intake.md · glossary.md
 │  ├─ operating-rhythm.md · integrations.md · decision-log.md
-│  ├─ methods/              # 10 reusable technique files
+│  ├─ methods/              # 11 reusable technique files
 │  └─ prds/ sprints/ projects/ launches/ ceremonies/   # generated artifacts
 ├─ templates/               # fill-in deliverable templates
 ├─ standards/               # document · communication · agile house style

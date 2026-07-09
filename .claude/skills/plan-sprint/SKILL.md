@@ -31,3 +31,9 @@ Start from `templates/sprint-plan.md`. Save a sprint plan artifact (e.g., `knowl
 ## Optional sync
 If a tool is configured in `knowledge/integrations.md`, offer to create/update the sprint and its items in
 that tool after recording the plan. Files remain source of truth; skip if not configured.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

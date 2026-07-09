@@ -13,3 +13,9 @@
 -->
 
 _No decisions logged yet. `/setup-pmo` will record the first entries._
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

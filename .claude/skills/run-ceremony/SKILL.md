@@ -29,3 +29,9 @@ Facilitate each to its purpose; keep notes to decisions, actions (owner + due), 
 ## Output
 A ceremony-notes artifact (e.g., `knowledge/ceremonies/<date>-<type>.md`); update `knowledge/raid-log.md`
 with impediments; log consequential decisions/improvements to `knowledge/decision-log.md`.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373

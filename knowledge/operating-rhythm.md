@@ -34,3 +34,9 @@
 This rhythm is executable today by invoking the named skills on cadence. The recurring items (standup,
 weekly status, sprint events) can also be automated with scheduled routines so the PMO prompts the team
 on time rather than waiting to be asked.
+
+---
+
+**Created by Colin Beck**<br>
+LinkedIn: https://www.linkedin.com/in/beckcolin/<br>
+GitHub: https://github.com/link7373
