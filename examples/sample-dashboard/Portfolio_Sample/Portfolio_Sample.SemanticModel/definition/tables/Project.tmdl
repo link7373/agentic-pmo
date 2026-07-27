@@ -1,0 +1,61 @@
+/// Project dimension. One row per project or program item.
+table Project
+	lineageTag: 11111111-1111-1111-1111-111111111111
+
+	column Project_Id
+		dataType: string
+		sourceColumn: Project_Id
+		summarizeBy: none
+
+	column Project_Name
+		dataType: string
+		sourceColumn: Project_Name
+		summarizeBy: none
+
+	column Program
+		dataType: string
+		sourceColumn: Program
+		summarizeBy: none
+
+	column Sponsor
+		dataType: string
+		sourceColumn: Sponsor
+		summarizeBy: none
+
+	column Manager
+		dataType: string
+		sourceColumn: Manager
+		summarizeBy: none
+
+	column Stage
+		dataType: string
+		sourceColumn: Stage
+		summarizeBy: none
+
+	column Approach
+		dataType: string
+		sourceColumn: Approach
+		summarizeBy: none
+
+	column Strategic_Link
+		dataType: string
+		sourceColumn: Strategic_Link
+		summarizeBy: none
+
+	partition Project = m
+		mode: import
+		source =
+				let
+					Source = #table(
+						type table [Project_Id = text, Project_Name = text, Program = text, Sponsor = text, Manager = text, Stage = text, Approach = text, Strategic_Link = text],
+						{
+							{"P001", "Core_Ledger_Uplift", "Modernisation", "A_Sponsor", "M_Alvarez", "in-flight", "hybrid", "Reduce_Run_Cost"},
+							{"P002", "Identity_Migration", "Modernisation", "A_Sponsor", "M_Alvarez", "in-flight", "predictive", "Reduce_Run_Cost"},
+							{"P003", "Data_Platform_v2", "Modernisation", "B_Sponsor", "R_Okafor", "in-flight", "adaptive", "Faster_Insight"},
+							{"P004", "Self_Serve_Portal", "Customer", "C_Sponsor", "R_Okafor", "in-flight", "adaptive", "Grow_Adoption"},
+							{"P005", "Billing_Refresh", "Customer", "C_Sponsor", "T_Nguyen", "in-flight", "hybrid", "Grow_Adoption"},
+							{"P006", "Partner_Onboarding", "Customer", "C_Sponsor", "T_Nguyen", "approved", "adaptive", "Grow_Adoption"}
+						}
+					)
+				in
+					Source

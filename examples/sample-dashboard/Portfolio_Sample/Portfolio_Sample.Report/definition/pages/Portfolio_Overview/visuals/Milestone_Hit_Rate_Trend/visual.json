@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "Milestone_Hit_Rate_Trend",
+  "position": {
+    "x": 16,
+    "y": 200,
+    "z": 400,
+    "width": 616,
+    "height": 300,
+    "tabOrder": 1400
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date"
+                    }
+                  },
+                  "Property": "Month_Label"
+                }
+              },
+              "queryRef": "Date.Month_Label",
+              "nativeQueryRef": "Month_Label"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "Milestone Hit Rate"
+                }
+              },
+              "queryRef": "Fact_Status.Milestone Hit Rate",
+              "nativeQueryRef": "Milestone Hit Rate"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

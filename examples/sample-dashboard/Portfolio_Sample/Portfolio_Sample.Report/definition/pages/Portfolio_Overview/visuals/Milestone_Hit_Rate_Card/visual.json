@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "Milestone_Hit_Rate_Card",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "z": 0,
+    "width": 300,
+    "height": 160,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "Milestone Hit Rate"
+                }
+              },
+              "queryRef": "Fact_Status.Milestone Hit Rate",
+              "nativeQueryRef": "Milestone Hit Rate"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

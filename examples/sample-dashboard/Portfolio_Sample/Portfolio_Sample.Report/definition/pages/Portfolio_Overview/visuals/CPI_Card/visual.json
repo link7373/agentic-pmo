@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "CPI_Card",
+  "position": {
+    "x": 648,
+    "y": 16,
+    "z": 200,
+    "width": 300,
+    "height": 160,
+    "tabOrder": 1200
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "CPI"
+                }
+              },
+              "queryRef": "Fact_Status.CPI",
+              "nativeQueryRef": "CPI"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,2 @@
+/// Unused by the inline sample data; present to show the convention.
+expression p_ServerName = "localhost" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]

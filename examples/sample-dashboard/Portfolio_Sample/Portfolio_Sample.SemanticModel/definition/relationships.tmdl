@@ -1,0 +1,7 @@
+relationship 44444444-4444-4444-4444-444444444444
+	fromColumn: Fact_Status.Project_Id
+	toColumn: Project.Project_Id
+
+relationship 55555555-5555-5555-5555-555555555555
+	fromColumn: Fact_Status.Report_Month
+	toColumn: 'Date'.Date

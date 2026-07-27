@@ -12,8 +12,8 @@ persisted across sessions.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Built for](https://img.shields.io/badge/Built%20for-Claude%20Code-8A2BE2.svg)
-![Agents](https://img.shields.io/badge/Agents-13-blue.svg)
-![Skills](https://img.shields.io/badge/Skills-21-blue.svg)
+![Agents](https://img.shields.io/badge/Agents-14-blue.svg)
+![Skills](https://img.shields.io/badge/Skills-22-blue.svg)
 
 ---
 
@@ -21,8 +21,8 @@ persisted across sessions.
 
 A real PMO is a team of specialists working a shared operating rhythm: strategists, product managers,
 owners, researchers, analysts, project, program and portfolio managers, scrum masters, release managers. This
-kit recreates that team as **13 role-based agents** coordinated by a **Head of PMO** orchestrator, driven by
-**21 plain-English workflows**, and anchored by a **persistent memory** so decisions and context survive
+kit recreates that team as **14 role-based agents** coordinated by a **Head of PMO** orchestrator, driven by
+**22 plain-English workflows**, and anchored by a **persistent memory** so decisions and context survive
 across sessions.
 
 You talk to it in business English — *"build me a roadmap," "write a PRD for X," "plan the next sprint,"
@@ -36,8 +36,8 @@ flowchart TD
     A(["👤 You · plain English"]) -->|"fill in once"| B["📋 START-HERE.md — the charter"]
     B -->|"/setup-pmo"| M
     A -->|"requests"| M{{"🧭 Head of PMO — orchestrator (CLAUDE.md)"}}
-    M --> SK[/"21 Skills · workflows"/]
-    SK --> AG["👥 13 Role Agents — product · delivery · cross-cutting"]
+    M --> SK[/"22 Skills · workflows"/]
+    SK --> AG["👥 14 Role Agents — product · delivery · cross-cutting"]
     AG --> ME[("📚 Methods library")]
     AG --> ST[("📐 Standards")]
     AG --> KN[("🧠 knowledge/ — source of truth")]
@@ -55,8 +55,8 @@ flowchart TD
 | Part | What it is |
 |------|------------|
 | 🧭 **Orchestrator** (`CLAUDE.md`) | The Head of PMO — routes requests, sequences multi-step work, runs the operating rhythm, owns final QA. |
-| 👥 **Agents** (`.claude/agents/`) | 13 specialists, each scoped to a role with its own method playbook. |
-| ⚙️ **Skills** (`.claude/skills/`) | 21 slash-command workflows that do the actual jobs. |
+| 👥 **Agents** (`.claude/agents/`) | 14 specialists, each scoped to a role with its own method playbook. |
+| ⚙️ **Skills** (`.claude/skills/`) | 22 slash-command workflows that do the actual jobs. |
 | 🧠 **Knowledge** (`knowledge/`) | Persistent memory — product context, roadmap, backlog, portfolio, RAID, intake, decisions. The **source of truth**. |
 | 📚📐 **Methods & Standards** | A reusable library of techniques (`knowledge/methods/`) and house style (`standards/`). |
 
@@ -101,7 +101,7 @@ flowchart LR
     RV -. "informs next cycle" .-> R
 ```
 
-## The team — 13 agents
+## The team — 14 agents
 
 **Product**
 
@@ -130,8 +130,9 @@ flowchart LR
 |-------|------|
 | `delivery-monitor` | Status/velocity/burndown tracking, risk & anomaly surfacing, RAID & scorecards |
 | `comms-lead` | Stakeholder & executive communications, audience-tailored deliverables |
+| `powerbi-validator` | Deterministic validation of Power BI projects before they reach Desktop or a stakeholder |
 
-## The workflows — 21 skills
+## The workflows — 22 skills
 
 | Skill | What it does | Lead agent |
 |-------|--------------|------------|
@@ -152,6 +153,7 @@ flowchart LR
 | `/review-portfolio-intake` | Quality-gate PM/PgM submissions; confidence per item | portfolio-analyst |
 | `/track-portfolio` | Portfolio rollup: themes, collisions, capacity, two-tier report | portfolio-analyst + delivery-monitor → comms-lead |
 | `/design-dashboard` | Spec a portfolio dashboard: model, measures, drill paths | portfolio-analyst + comms-lead |
+| `/powerbi` | Build the dashboard as a PBIP project; validate before it opens | portfolio-analyst + powerbi-validator |
 | `/plan-portfolio-automation` | Spec status-intake & data-flow automation | portfolio-analyst |
 | `/run-ceremony` | Facilitate planning / standup / review / retro | scrum-master |
 | `/plan-launch` | Rollout strategy, readiness, go/no-go | release-manager |
@@ -171,6 +173,7 @@ The PMO remembers. Everything lives in `knowledge/` as the single source of trut
 
 - **Context:** `product-context.md`, `stakeholder-map.md`, `cadence.md`, `glossary.md`
 - **Work:** `roadmap.md`, `backlog.md`, `intake.md` (the front door), `raid-log.md`, `portfolio.md` (the register)
+- **Definitions:** `portfolio-measures.md` — one definition per measure; the contract a dashboard build implements
 - **Artifacts:** `prds/`, `sprints/`, `projects/`, `launches/`, `ceremonies/`, `portfolio/`
 - **Governance:** `decision-log.md` (a traceable record of consequential decisions)
 - **Cadence:** `operating-rhythm.md` — what happens daily / weekly / per-sprint / monthly / per-quarter, each step
@@ -186,8 +189,10 @@ spec, and automation spec — so output is consistent and fast.
 ## Standards
 
 House style lives in `standards/`: `document-standards.md` (artifact structure, decision-log format),
-`communication-standards.md` (audience playbook, BLUF, RAG discipline), and `agile-standards.md`
-(story format, Definition of Ready/Done, estimation).
+`communication-standards.md` (audience playbook, BLUF, RAG discipline), `agile-standards.md`
+(story format, Definition of Ready/Done, estimation), `dashboard-standards.md` (layout, chart selection,
+colour and colour-blind safety, honesty rules — the single authority for design), and
+`powerbi-standards.md` (Power BI mechanics only: project layout, naming, semantic model, the validation gate).
 
 ## See it in action
 
@@ -201,10 +206,27 @@ calibrate the quality bar before running your own. (It's illustrative only; the 
 Files are canonical. **Optional** sync to external tools is configured in
 [`knowledge/integrations.md`](knowledge/integrations.md):
 
-- Skills that manage trackable items (`/groom-backlog`, `/plan-sprint`, `/track-status`, `/make-deliverable`)
-  update the `knowledge/` file **first**, then offer to push to a configured tool (Jira / Linear / Notion /
-  Slack) via its connector.
+- Skills that manage trackable items (`/groom-backlog`, `/plan-sprint`, `/track-status`, `/track-portfolio`,
+  `/make-deliverable`) update the `knowledge/` file **first**, then offer to push to a configured tool (Jira /
+  Linear / Notion / Slack) via its connector.
 - If nothing is configured, everything runs **file-only** — no setup, no dependencies, fully portable.
+
+## Power BI dashboards as code
+
+Portfolio dashboards aren't only specified — they're **built**. `/design-dashboard` writes the spec (questions,
+grain, measure catalog, layout, drill paths); `/powerbi` builds it as a **PBIP project** — semantic model in
+TMDL, pages and visuals in PBIR, theme JSON — which is plain text, so a dashboard is diffed, reviewed and
+version-controlled like any other artifact. A deterministic validator catches the failures that don't announce
+themselves (the misnamed folder Desktop silently drops, the BOM that stops the project opening at all), and
+`powerbi-validator` runs an independent pass before anything reaches a stakeholder.
+
+Capability scales with what's installed — from spec-only, through full project authoring (Power BI Desktop plus
+Python, the default), to a workspace-connected deployment. **Spec-only is a legitimate stop**, not a failure.
+
+Two things the kit is deliberately honest about: a project that validates is only *well-formed* — it isn't done
+until it renders in Desktop and every number reconciles against the register it came from. And portfolio
+automation (Power Automate, OnePlan, Jira-side flows) has **no build capability** — those skills produce
+specifications a person implements, and say so.
 
 ## Repository layout
 
@@ -215,16 +237,17 @@ agentic-pmo/
 ├─ README.md
 ├─ LICENSE · .gitignore · .gitattributes
 ├─ .claude/
-│  ├─ agents/               # 13 role sub-agents
-│  └─ skills/               # 21 slash-command workflows
+│  ├─ agents/               # 14 role sub-agents
+│  └─ skills/               # 22 slash-command workflows
 ├─ knowledge/               # persistent memory — source of truth
 │  ├─ product-context.md · stakeholder-map.md · roadmap.md · backlog.md
 │  ├─ raid-log.md · cadence.md · intake.md · glossary.md · portfolio.md
-│  ├─ operating-rhythm.md · integrations.md · decision-log.md
+│  ├─ portfolio-measures.md · operating-rhythm.md · integrations.md · decision-log.md
 │  ├─ methods/              # 12 reusable technique files
 │  └─ prds/ sprints/ projects/ launches/ ceremonies/ portfolio/   # generated artifacts
+├─ dashboards/              # built dashboard projects (PBIP, plain text, tracked)
 ├─ templates/               # fill-in deliverable templates
-├─ standards/               # document · communication · agile house style
+├─ standards/               # document · communication · agile · dashboard · Power BI
 └─ examples/                # worked sample product ("Cadence")
 ```
 

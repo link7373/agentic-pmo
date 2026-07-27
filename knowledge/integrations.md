@@ -9,8 +9,8 @@
 | _Jira / Linear_ | backlog & sprints | push / pull / two-way | not configured |
 | _Notion_ | docs & roadmap | push / pull | not configured |
 | _Slack / Teams_ | status & announcements | push | not configured |
-| _Power BI_ | portfolio dashboards | spec handoff → build | available via the BI capability (below) |
-| _Tableau / other BI_ | portfolio dashboards | spec handoff → build | not configured |
+| _Power BI_ | portfolio dashboards | built in-kit via `/powerbi` | **available — the default platform** |
+| _Tableau / other BI_ | portfolio dashboards | spec only | not configured |
 | _Power Automate_ | status intake & data flow | push / pull | **no capability — spec only** |
 | _OnePlan / PPM platform_ | resource & capacity data | pull | **no capability — spec only** |
 
@@ -20,33 +20,32 @@
 - Sync uses the available MCP connector for that tool. If the connector isn't connected/authenticated, the
   skill reports it and continues file-only — never blocks.
 
-## Dashboards — the BI build capability
-Power BI dashboards are buildable **as code**: the project is plain text — the semantic model, the report
-pages and visuals, and the theme — so a dashboard is an ordinary reviewable artifact rather than something
-only clickable in a GUI. That capability lives in a companion kit, `agentic-bi-team`
-(https://github.com/link7373/agentic-bi-team), not in this one.
+## Dashboards — built in-kit
+Power BI is the default reporting platform and the PMO **builds** its dashboards rather than only specifying
+them. A PBIP project is plain text — semantic model in TMDL, pages and visuals in PBIR, theme JSON — so a
+dashboard is an ordinary reviewable artifact rather than something only clickable in a GUI.
 
-**The division of labour:**
+**The path:** `/design-dashboard` (spec → `knowledge/portfolio/`) → `/powerbi` (build → `dashboards/`) →
+`powerbi-validator` (independent gate). Standards: `standards/dashboard-standards.md` for design — the single
+authority — and `standards/powerbi-standards.md` for Power BI mechanics.
 
-| This kit (`/design-dashboard`) | The BI capability |
-|---|---|
-| Questions, decisions, audience tiers | Project authoring and platform mechanics |
-| Grain, star schema, relationships | Model implementation |
-| Measure catalog — names and definitions | Measure implementation, named exactly as specified |
-| Page layout, safe names, drill paths | Chart formatting against its own design standard, theme |
-| Refresh, lineage, access, privacy constraints | Validation, reconciliation, publishing |
-
-**Capability tiers.** What a handoff delivers depends on what's installed at the far end — from spec-only, up
-through full project authoring, to a workspace-connected deployment. Confirm the tier before promising a date;
-`/design-dashboard` records it in the spec's `## Handoff` section. Spec-only is a legitimate stop: a complete,
-correct specification is real work product.
+**Capability tiers.** What a build delivers depends on what's installed locally: spec-only needs nothing; full
+project authoring needs Power BI Desktop plus Python and is the default; CLI-accelerated and
+workspace-connected tiers need extra tooling the user chooses to install. `/powerbi` detects and states the tier
+before it starts. Spec-only is a legitimate stop, not a failure. Detection commands are in
+`.claude/skills/powerbi/references/tooling-tiers.md`.
 
 **Rules that hold regardless of tier:**
-- Measure names are a contract. A name that drifts between spec and build is a defect, not a variation. New
-  portfolio measures are defined in the spec's catalog first, never invented during the build.
-- A surface isn't done when it renders. Every displayed number reconciles against an independent query, and
-  the empty state is tested, before anyone sees it.
+- Measure names are a contract. A name that drifts between `knowledge/portfolio-measures.md` and a built surface
+  is a defect, not a variation. New measures go in the catalog first, never invented during a build.
+- A project that validates is only well-formed. It isn't done until it renders in Desktop, every number
+  reconciles against the register or cycle artifact it came from, and the empty state is tested.
 - Publishing to a wider or external audience is a decision that needs confirming, not a step in the build.
+- A portfolio surface names real people. Saved filter state persists into tracked files — keep the default
+  impersonal.
+
+**Another platform?** If the portfolio reports through Tableau or anything else, `/powerbi` does not apply and
+none of its mechanics transfer. `/design-dashboard` still produces a complete spec; a person builds from it.
 
 ## Automation — no capability today
 Power Automate, SharePoint, OnePlan and Jira-side flow automation have **no build capability available**, in

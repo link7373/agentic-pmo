@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "Capacity_Demand_By_Manager",
+  "position": {
+    "x": 832,
+    "y": 200,
+    "z": 200,
+    "width": 432,
+    "height": 320,
+    "tabOrder": 1200
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Project"
+                    }
+                  },
+                  "Property": "Manager"
+                }
+              },
+              "queryRef": "Project.Manager",
+              "nativeQueryRef": "Manager"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "Capacity Demand FTE"
+                }
+              },
+              "queryRef": "Fact_Status.Capacity Demand FTE",
+              "nativeQueryRef": "Capacity Demand FTE"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

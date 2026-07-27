@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "SPI_By_Project",
+  "position": {
+    "x": 16,
+    "y": 200,
+    "z": 100,
+    "width": 800,
+    "height": 320,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Project"
+                    }
+                  },
+                  "Property": "Project_Name"
+                }
+              },
+              "queryRef": "Project.Project_Name",
+              "nativeQueryRef": "Project_Name"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "SPI"
+                }
+              },
+              "queryRef": "Fact_Status.SPI",
+              "nativeQueryRef": "SPI"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

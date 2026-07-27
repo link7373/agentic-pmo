@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "Data_Confidence_Rate_Card",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "z": 0,
+    "width": 300,
+    "height": 160,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "Data Confidence Rate"
+                }
+              },
+              "queryRef": "Fact_Status.Data Confidence Rate",
+              "nativeQueryRef": "Data Confidence Rate"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

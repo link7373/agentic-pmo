@@ -18,7 +18,9 @@ never need to know which agent did what.
    request doesn't ladder up to the strategy, surface that before doing it.
 3. **Log decisions.** Record consequential decisions in `knowledge/decision-log.md` (format in
    `standards/document-standards.md`) so the work is traceable and reproducible.
-4. **Follow the house standards** in `standards/` for every artifact and communication.
+4. **Follow the house standards** in `standards/` for every artifact and communication. Dashboards additionally
+   follow `standards/dashboard-standards.md` (design — the single authority) and, on Power BI,
+   `standards/powerbi-standards.md` (mechanics only).
 5. **Be honest about confidence.** State assumptions, open questions, and what would change the conclusion.
    Don't manufacture certainty or data.
 
@@ -44,13 +46,15 @@ never need to know which agent did what.
 **Cross-cutting**
 - `delivery-monitor` — status/velocity/burndown tracking, risk/anomaly surfacing, RAID & scorecards.
 - `comms-lead` — stakeholder & executive communications, deliverable formatting.
+- `powerbi-validator` — deterministic validation of Power BI projects before they reach Desktop or a
+  stakeholder; the gate on anything `/powerbi` builds.
 
 ## Skills (workflows in `.claude/skills/`)
 
 `/setup-pmo` · `/define-strategy` · `/review-okrs` · `/capture-feedback` · `/run-discovery` ·
 `/elicit-requirements` · `/write-prd` · `/prioritize` · `/build-roadmap` · `/groom-backlog` · `/plan-sprint` ·
 `/plan-capacity` · `/plan-project` · `/track-status` · `/run-ceremony` · `/plan-launch` · `/make-deliverable` ·
-`/review-portfolio-intake` · `/track-portfolio` · `/design-dashboard` · `/plan-portfolio-automation`
+`/review-portfolio-intake` · `/track-portfolio` · `/design-dashboard` · `/powerbi` · `/plan-portfolio-automation`
 
 Skills start from a `templates/` file where one exists and save the result to the right `knowledge/`
 location (PRDs → `knowledge/prds/`, sprints → `knowledge/sprints/`, projects → `knowledge/projects/`,
@@ -79,6 +83,8 @@ launches → `knowledge/launches/`, ceremonies → `knowledge/ceremonies/`, port
 | Portfolio-wide status, rollup, collisions, "how is everything doing?" | `portfolio-analyst` (+ `delivery-monitor`, `comms-lead`) | `/track-portfolio` |
 | Quality of PM/PgM status submissions, missing or doubtful data | `portfolio-analyst`                  | `/review-portfolio-intake` |
 | Design a portfolio dashboard, data model, measure definitions | `portfolio-analyst` (+ `comms-lead`)  | `/design-dashboard` |
+| Build/fix a Power BI dashboard, measure or model          | `portfolio-analyst` (+ `powerbi-validator`) | `/powerbi`    |
+| Check a Power BI project will open / audit after edits   | `powerbi-validator`                        | —                |
 | Automate status intake or portfolio data flow            | `portfolio-analyst`                        | `/plan-portfolio-automation` |
 | Define/measure metrics, design an experiment             | `product-analyst`                          | —                |
 | Executive update, board/steerco deck, stakeholder comms  | `comms-lead`                               | `/make-deliverable` |
@@ -96,6 +102,8 @@ clarifying question.
   - Reporting: `delivery-monitor` (gather) → `comms-lead` (format for audience).
   - Portfolio reporting: `/review-portfolio-intake` (gate the data) → `/track-portfolio`
     (`portfolio-analyst` + `delivery-monitor`) → `comms-lead` (leadership tier). Never roll up ungated data.
+  - Dashboard: `/design-dashboard` (spec) → `/powerbi` (build the project) → `powerbi-validator` (gate it).
+    Never build without a spec; never ship on validation alone — it must render and reconcile.
 - **Respect the altitude boundary.** `portfolio-analyst` owns the portfolio *data layer* and supplies evidence;
   `program-manager` still decides sequencing and load balancing, and `delivery-monitor` still owns project and
   sprint health. Route single-project or sprint questions down, not up.

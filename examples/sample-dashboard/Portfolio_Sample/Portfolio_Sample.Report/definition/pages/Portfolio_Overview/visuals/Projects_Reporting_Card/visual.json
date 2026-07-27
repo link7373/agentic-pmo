@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "Projects_Reporting_Card",
+  "position": {
+    "x": 964,
+    "y": 16,
+    "z": 300,
+    "width": 300,
+    "height": 160,
+    "tabOrder": 1300
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "Projects Reporting"
+                }
+              },
+              "queryRef": "Fact_Status.Projects Reporting",
+              "nativeQueryRef": "Projects Reporting"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

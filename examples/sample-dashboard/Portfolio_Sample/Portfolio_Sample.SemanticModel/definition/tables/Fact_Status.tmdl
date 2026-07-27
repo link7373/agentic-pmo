@@ -1,0 +1,127 @@
+/// Portfolio status fact. Grain: one row per project per reporting month.
+table Fact_Status
+	lineageTag: 33333333-3333-3333-3333-333333333333
+
+	/// Share of milestones due in the period that were met.
+	measure 'Milestone Hit Rate' = DIVIDE(SUM(Fact_Status[Milestones_Hit]), SUM(Fact_Status[Milestones_Due]))
+		formatString: 0.0%
+
+	/// Schedule Performance Index. Below 1.00 is behind schedule.
+	measure SPI = DIVIDE(SUM(Fact_Status[Earned_Value]), SUM(Fact_Status[Planned_Value]))
+		formatString: 0.00
+
+	/// Cost Performance Index. Below 1.00 is over budget.
+	measure CPI = DIVIDE(SUM(Fact_Status[Earned_Value]), SUM(Fact_Status[Actual_Cost]))
+		formatString: 0.00
+
+	/// Distinct projects that submitted in the filtered period.
+	measure 'Projects Reporting' = DISTINCTCOUNT(Fact_Status[Project_Id])
+		formatString: 0
+
+	/// Total capacity drawn, in full-time equivalents.
+	measure 'Capacity Demand FTE' = SUM(Fact_Status[Capacity_Demand_Fte])
+		formatString: 0.0
+
+	/// Share of submissions at High or Medium confidence. The health of
+	/// the reporting system itself, not of the work.
+	measure 'Data Confidence Rate' = DIVIDE(CALCULATE(COUNTROWS(Fact_Status), Fact_Status[Confidence] IN {"High", "Medium"}), COUNTROWS(Fact_Status))
+		formatString: 0.0%
+
+	column Project_Id
+		dataType: string
+		sourceColumn: Project_Id
+		summarizeBy: none
+
+	column Report_Month
+		dataType: dateTime
+		sourceColumn: Report_Month
+		summarizeBy: none
+		formatString: yyyy-mm-dd
+
+	column Planned_Value
+		dataType: double
+		sourceColumn: Planned_Value
+		summarizeBy: none
+
+	column Earned_Value
+		dataType: double
+		sourceColumn: Earned_Value
+		summarizeBy: none
+
+	column Actual_Cost
+		dataType: double
+		sourceColumn: Actual_Cost
+		summarizeBy: none
+
+	column Milestones_Due
+		dataType: int64
+		sourceColumn: Milestones_Due
+		summarizeBy: none
+
+	column Milestones_Hit
+		dataType: int64
+		sourceColumn: Milestones_Hit
+		summarizeBy: none
+
+	column Rag
+		dataType: string
+		sourceColumn: Rag
+		summarizeBy: none
+
+	column Confidence
+		dataType: string
+		sourceColumn: Confidence
+		summarizeBy: none
+
+	column Capacity_Demand_Fte
+		dataType: double
+		sourceColumn: Capacity_Demand_Fte
+		summarizeBy: none
+
+	partition Fact_Status = m
+		mode: import
+		source =
+				let
+					Source = #table(
+						type table [Project_Id = text, Report_Month = datetime, Planned_Value = number, Earned_Value = number, Actual_Cost = number, Milestones_Due = Int64.Type, Milestones_Hit = Int64.Type, Rag = text, Confidence = text, Capacity_Demand_Fte = number],
+						{
+							{"P001", #datetime(2026, 1, 1, 0, 0, 0), 100, 98, 102, 4, 4, "Green", "High", 6.0},
+							{"P001", #datetime(2026, 2, 1, 0, 0, 0), 210, 200, 218, 3, 3, "Green", "High", 6.5},
+							{"P001", #datetime(2026, 3, 1, 0, 0, 0), 330, 300, 350, 4, 3, "Green", "High", 7.0},
+							{"P001", #datetime(2026, 4, 1, 0, 0, 0), 450, 395, 480, 4, 3, "Green", "Medium", 7.5},
+							{"P001", #datetime(2026, 5, 1, 0, 0, 0), 580, 480, 620, 5, 3, "Amber", "Medium", 8.0},
+							{"P001", #datetime(2026, 6, 1, 0, 0, 0), 700, 560, 760, 5, 2, "Red", "Low", 8.5},
+							{"P002", #datetime(2026, 1, 1, 0, 0, 0), 80, 80, 78, 2, 2, "Green", "High", 3.0},
+							{"P002", #datetime(2026, 2, 1, 0, 0, 0), 160, 158, 160, 2, 2, "Green", "High", 3.0},
+							{"P002", #datetime(2026, 3, 1, 0, 0, 0), 250, 240, 255, 3, 3, "Green", "High", 3.5},
+							{"P002", #datetime(2026, 4, 1, 0, 0, 0), 340, 320, 350, 3, 2, "Amber", "High", 4.0},
+							{"P002", #datetime(2026, 5, 1, 0, 0, 0), 430, 400, 450, 3, 2, "Amber", "Medium", 4.0},
+							{"P002", #datetime(2026, 6, 1, 0, 0, 0), 520, 470, 560, 3, 2, "Amber", "Medium", 4.5},
+							{"P003", #datetime(2026, 1, 1, 0, 0, 0), 120, 125, 115, 3, 3, "Green", "High", 5.0},
+							{"P003", #datetime(2026, 2, 1, 0, 0, 0), 250, 260, 240, 3, 3, "Green", "High", 5.5},
+							{"P003", #datetime(2026, 3, 1, 0, 0, 0), 390, 400, 380, 4, 4, "Green", "High", 6.0},
+							{"P003", #datetime(2026, 4, 1, 0, 0, 0), 530, 545, 520, 4, 4, "Green", "High", 6.5},
+							{"P003", #datetime(2026, 5, 1, 0, 0, 0), 670, 690, 660, 4, 4, "Green", "High", 7.0},
+							{"P003", #datetime(2026, 6, 1, 0, 0, 0), 810, 835, 800, 4, 4, "Green", "High", 7.0},
+							{"P004", #datetime(2026, 1, 1, 0, 0, 0), 60, 58, 62, 2, 2, "Green", "High", 2.5},
+							{"P004", #datetime(2026, 2, 1, 0, 0, 0), 130, 124, 135, 2, 2, "Green", "High", 3.0},
+							{"P004", #datetime(2026, 3, 1, 0, 0, 0), 200, 190, 210, 2, 2, "Green", "Medium", 3.0},
+							{"P004", #datetime(2026, 4, 1, 0, 0, 0), 275, 258, 290, 3, 2, "Amber", "Medium", 3.5},
+							{"P004", #datetime(2026, 5, 1, 0, 0, 0), 350, 330, 370, 3, 3, "Green", "High", 3.5},
+							{"P004", #datetime(2026, 6, 1, 0, 0, 0), 430, 410, 450, 3, 3, "Green", "High", 4.0},
+							{"P005", #datetime(2026, 1, 1, 0, 0, 0), 90, 88, 92, 2, 2, "Green", "High", 4.0},
+							{"P005", #datetime(2026, 2, 1, 0, 0, 0), 185, 180, 190, 3, 3, "Green", "High", 4.0},
+							{"P005", #datetime(2026, 3, 1, 0, 0, 0), 285, 270, 295, 3, 2, "Amber", "Medium", 4.5},
+							{"P005", #datetime(2026, 4, 1, 0, 0, 0), 390, 360, 410, 3, 2, "Amber", "Low", 5.0},
+							{"P005", #datetime(2026, 5, 1, 0, 0, 0), 500, 455, 530, 4, 2, "Red", "Low", 5.5},
+							{"P005", #datetime(2026, 6, 1, 0, 0, 0), 610, 550, 650, 4, 3, "Amber", "Medium", 5.5},
+							{"P006", #datetime(2026, 1, 1, 0, 0, 0), 0, 0, 0, 0, 0, "Green", "High", 0.5},
+							{"P006", #datetime(2026, 2, 1, 0, 0, 0), 0, 0, 0, 0, 0, "Green", "High", 0.5},
+							{"P006", #datetime(2026, 3, 1, 0, 0, 0), 20, 18, 22, 1, 1, "Green", "Medium", 1.5},
+							{"P006", #datetime(2026, 4, 1, 0, 0, 0), 55, 50, 58, 1, 1, "Green", "Medium", 2.5},
+							{"P006", #datetime(2026, 5, 1, 0, 0, 0), 95, 85, 100, 2, 1, "Amber", "Medium", 3.5},
+							{"P006", #datetime(2026, 6, 1, 0, 0, 0), 140, 125, 150, 2, 1, "Amber", "Low", 4.5}
+						}
+					)
+				in
+					Source

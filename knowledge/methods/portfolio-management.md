@@ -174,10 +174,12 @@ Applies to any BI surface — the discipline is tool-independent:
 - **Show data confidence**, not just values. A number derived from three low-confidence submissions should
   visibly say so.
 
-## Specifying a surface someone else builds
+## Specifying a surface before building it
 
-The portfolio analyst specifies; a build capability implements. A specification is only finished if it can be
-built from without a follow-up question, so a few decisions belong upstream rather than being left to the builder:
+Specification and build are separate acts even when the same person does both — and on Power BI the PMO does
+both (`/design-dashboard` then `/powerbi`). Keeping them separate is what stops requirements being invented
+inside a measure. A specification is only finished if it could be built from without a follow-up question, so
+these decisions belong in the spec rather than in the build:
 
 - **Model as a star schema with exactly one date table.** A fact table surrounded by dimensions — not one wide
   table, not snowflaked — honouring the organization's fiscal calendar. Keep relationships single-direction

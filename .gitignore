@@ -11,6 +11,16 @@ Books/
 # knowledge/ceremonies/*
 # !knowledge/**/README.md
 
+# Power BI Projects (PBIP): the .pbip / .pbir / .tmdl / .json text IS tracked —
+# it's the reproducible layer, same as .md. Only the binary cache and per-user
+# state are ignored (these match what Power BI Desktop generates when you save
+# as a project). A BOM in localSettings.json stops Desktop opening the whole
+# project, and being gitignored does not mean Desktop skips it.
+*.pbix
+*.pbit
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+
 # Secrets / environment files
 .env
 .env.*

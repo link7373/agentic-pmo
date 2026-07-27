@@ -102,19 +102,27 @@ builder must be told about:
   performance of *people*. Data-quality gaps are attributed to an owner so they can be fixed, not ranked.
 
 ## Handoff
-_The PMO specifies; a build capability implements. This section is the contract between them._
+_This section is the contract between the spec and the build._
 
-- **Build route:** <the BI capability | a report developer | undecided>
+- **Build route:** <`/powerbi` (in-kit, Power BI) | a report developer | undecided>
 - **Capability tier available:** <spec only | full project authoring | CLI-accelerated | workspace-connected>
-  — this determines what "handed off" actually delivers; confirm it before promising a date.
+  — this determines what the build actually delivers; confirm it before promising a date.
+- **Project location:** `dashboards/<Safe_Name>/` once built. This spec stays here and outlives it.
 - **Ready to hand over:** the questions, decision list, semantic model, measure catalog, page layout and safe
   names, drill paths, refresh/lineage/access, and the privacy constraints above.
-- **The builder owns:** platform mechanics, chart formatting against their design standard, theme
-  implementation, validation, and reconciling every displayed number against an independent query.
-- **Not done until:** the surface has been opened and confirmed to render, every number reconciles, and the
-  empty state and a single-category filter have both been tested. A spec that validates is not a spec that works.
+- **The build owns:** platform mechanics, chart formatting against `standards/dashboard-standards.md`, theme
+  implementation, validation, and reconciling every displayed number against its source.
+- **Not done until:** the surface has been opened and confirmed to render, every number reconciles against the
+  register or cycle artifact it came from, and the empty state and a single-category filter have both been
+  tested. **A project that validates is not a project that works** — validation only proves the files are
+  well-formed.
 - **Open questions blocking the build:**
   - <question — owner — needed by>
+
+## Build log
+| Date | What changed | Validated clean | Reconciled | By |
+|------|--------------|-----------------|-----------|----|
+|      |              |                 |           |    |
 
 ## Review
 - **Validated against the decisions above by:** <name, date>

@@ -1,6 +1,6 @@
 ---
 name: design-dashboard
-description: Specify a portfolio dashboard — the decisions each audience tier must make, the semantic model and grain, a measure catalog with one definition per number, page layout, drill paths, refresh cadence and lineage. Produces a buildable spec, not a built dashboard. Dispatches the portfolio-analyst with comms-lead.
+description: Specify a portfolio dashboard — the decisions each audience tier must make, the semantic model and grain, a measure catalog with one definition per number, page layout, drill paths, refresh cadence and lineage. Produces a buildable spec, then hands off to /powerbi to build it when the platform is Power BI. Dispatches the portfolio-analyst with comms-lead.
 ---
 
 # /design-dashboard — Specify the reporting surface
@@ -41,10 +41,11 @@ reality).
 7. Work the **privacy** section deliberately. A portfolio surface carries sponsor and manager names, saved
    filter states can persist into the built report's files, and this surface reports the health of work — not
    the performance of people.
-8. Fill in `## Handoff`: the build route, the capability tier actually available, what's ready to hand over,
-   what the builder owns, and any open question blocking the build. Check
-   `knowledge/integrations.md` for the current route before naming one. State plainly that this is a
-   specification — the PMO specifies, a build capability implements.
+8. Fill in `## Handoff`: the build route, the capability tier actually available, and any open question
+   blocking the build. Check `knowledge/integrations.md` for the platform first.
+9. **Hand off to the build.** If the platform is Power BI, run `/powerbi` — it builds the real project from this
+   spec and `powerbi-validator` gates it. For any other platform the spec is the deliverable and a person
+   builds it; say so plainly rather than implying a surface exists.
 
 ## Methods
 `knowledge/methods/portfolio-management.md` (reporting layers, dashboard design principles, KPIs),
@@ -60,6 +61,9 @@ decision to `knowledge/decision-log.md`, since it binds every other report. Foll
 The spec is complete when someone could build the surface from it without asking a further question. It is not
 "done" when it renders — only when every displayed number reconciles against an independent query and the
 empty state has been tested. Track that as an open item until the builder confirms it.
+
+New measures go into `knowledge/portfolio-measures.md` **before** the build, never invented during it. That file
+is the contract the build implements character for character.
 
 ---
 

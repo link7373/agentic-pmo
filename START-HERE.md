@@ -78,6 +78,9 @@ _Your answer here..._
 - Should the PMO **sync** with any of those tools, or just keep everything in files here?
   (Files are the default source of truth; syncing is optional and set up later.)
 - Any formatting/branding needs for documents and reports?
+- **Reporting platform for dashboards?** (Power BI is the default and the PMO can build those itself as
+  projects; Tableau or anything else means it specs the dashboard and someone builds it.)
+- **Brand colours** for dashboards, if you have them? (Otherwise sensible accessible defaults are used.)
 
 _Your answer here..._
 

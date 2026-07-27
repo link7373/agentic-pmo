@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "Capacity_Demand_By_Program",
+  "position": {
+    "x": 648,
+    "y": 200,
+    "z": 500,
+    "width": 616,
+    "height": 300,
+    "tabOrder": 1500
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Project"
+                    }
+                  },
+                  "Property": "Program"
+                }
+              },
+              "queryRef": "Project.Program",
+              "nativeQueryRef": "Program"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Status"
+                    }
+                  },
+                  "Property": "Capacity Demand FTE"
+                }
+              },
+              "queryRef": "Fact_Status.Capacity Demand FTE",
+              "nativeQueryRef": "Capacity Demand FTE"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
