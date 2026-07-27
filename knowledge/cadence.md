@@ -1,7 +1,8 @@
 # Cadence & Team
 
 > How the work runs. Seeded by `/setup-pmo` from `START-HERE.md`, reconciled with
-> `standards/agile-standards.md`. Used by `scrum-master`, `project-manager`, `delivery-monitor`.
+> `standards/agile-standards.md`. Used by `scrum-master`, `project-manager`, `delivery-monitor`, and by
+> `portfolio-analyst` as the supply side of the demand & capacity cycle.
 
 ## Methodology
 _Scrum / Kanban / hybrid / other._

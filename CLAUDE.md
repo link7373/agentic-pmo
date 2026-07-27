@@ -36,6 +36,8 @@ never need to know which agent did what.
 **Delivery / project**
 - `project-manager` — project plans, WBS, schedule, scope & change control, RAID, status.
 - `program-manager` — cross-project coordination, dependencies, portfolio sequencing, program comms.
+- `portfolio-analyst` — the portfolio data layer one level above programs: register, status-intake quality
+  gates, demand & capacity analytics, cross-portfolio collisions, dashboard & automation specs.
 - `scrum-master` — ceremony facilitation, impediment removal, team health, agile metrics & coaching.
 - `release-manager` — release planning, launch/GTM readiness, rollout & change management.
 
@@ -47,11 +49,12 @@ never need to know which agent did what.
 
 `/setup-pmo` · `/define-strategy` · `/review-okrs` · `/capture-feedback` · `/run-discovery` ·
 `/elicit-requirements` · `/write-prd` · `/prioritize` · `/build-roadmap` · `/groom-backlog` · `/plan-sprint` ·
-`/plan-capacity` · `/plan-project` · `/track-status` · `/run-ceremony` · `/plan-launch` · `/make-deliverable`
+`/plan-capacity` · `/plan-project` · `/track-status` · `/run-ceremony` · `/plan-launch` · `/make-deliverable` ·
+`/review-portfolio-intake` · `/track-portfolio` · `/design-dashboard` · `/plan-portfolio-automation`
 
 Skills start from a `templates/` file where one exists and save the result to the right `knowledge/`
 location (PRDs → `knowledge/prds/`, sprints → `knowledge/sprints/`, projects → `knowledge/projects/`,
-launches → `knowledge/launches/`, ceremonies → `knowledge/ceremonies/`).
+launches → `knowledge/launches/`, ceremonies → `knowledge/ceremonies/`, portfolio → `knowledge/portfolio/`).
 
 ## Routing matrix (request → agent / skill)
 
@@ -67,12 +70,16 @@ launches → `knowledge/launches/`, ceremonies → `knowledge/ceremonies/`).
 | Build or update the roadmap                              | `product-manager` (+ `product-strategist`) | `/build-roadmap` |
 | Write/refine backlog, stories, acceptance criteria       | `product-owner`                            | `/groom-backlog` |
 | Plan the next sprint                                      | `scrum-master` (+ `product-owner`)         | `/plan-sprint`   |
-| Capacity planning, balance load across teams             | `program-manager` (+ `scrum-master`)       | `/plan-capacity` |
+| Capacity planning, balance load *across teams*           | `program-manager` (+ `scrum-master`)       | `/plan-capacity` |
 | Plan a project (schedule, milestones, dependencies)      | `project-manager`                          | `/plan-project`  |
 | Status report, health, RAID, burndown                    | `delivery-monitor` (+ `comms-lead`)        | `/track-status`  |
 | Run/facilitate a standup, planning, review, retro        | `scrum-master`                             | `/run-ceremony`  |
 | Plan a launch / go-to-market / release readiness         | `release-manager`                          | `/plan-launch`   |
-| Cross-project / portfolio coordination & dependencies    | `program-manager`                          | —                |
+| Cross-project / portfolio coordination & dependencies    | `program-manager` (+ `portfolio-analyst` for the data) | —    |
+| Portfolio-wide status, rollup, collisions, "how is everything doing?" | `portfolio-analyst` (+ `delivery-monitor`, `comms-lead`) | `/track-portfolio` |
+| Quality of PM/PgM status submissions, missing or doubtful data | `portfolio-analyst`                  | `/review-portfolio-intake` |
+| Design a portfolio dashboard, data model, measure definitions | `portfolio-analyst` (+ `comms-lead`)  | `/design-dashboard` |
+| Automate status intake or portfolio data flow            | `portfolio-analyst`                        | `/plan-portfolio-automation` |
 | Define/measure metrics, design an experiment             | `product-analyst`                          | —                |
 | Executive update, board/steerco deck, stakeholder comms  | `comms-lead`                               | `/make-deliverable` |
 
@@ -84,8 +91,14 @@ clarifying question.
 - **Sequence dependent work.** Common chains:
   - New initiative: `discovery-researcher` → `business-analyst` (elicit/analyze requirements, when ambiguous) →
     `product-manager` (PRD) → `product-manager` (prioritize) → `product-owner` (stories) → `scrum-master` (sprint).
-  - Quarter planning: `product-strategist` (OKRs) → `product-manager` (roadmap) → `program-manager` (sequence).
+  - Quarter planning: `product-strategist` (OKRs) → `product-manager` (roadmap) → `portfolio-analyst`
+    (capacity, collisions, constraint data) → `program-manager` (sequence).
   - Reporting: `delivery-monitor` (gather) → `comms-lead` (format for audience).
+  - Portfolio reporting: `/review-portfolio-intake` (gate the data) → `/track-portfolio`
+    (`portfolio-analyst` + `delivery-monitor`) → `comms-lead` (leadership tier). Never roll up ungated data.
+- **Respect the altitude boundary.** `portfolio-analyst` owns the portfolio *data layer* and supplies evidence;
+  `program-manager` still decides sequencing and load balancing, and `delivery-monitor` still owns project and
+  sprint health. Route single-project or sprint questions down, not up.
 - **Parallelize independent work** (e.g., discovery research and a competitive scan) and merge results.
 - **You own final QA.** Check every deliverable against the relevant `standards/` file and the request's
   intent before returning it. Fix or send back substandard work.

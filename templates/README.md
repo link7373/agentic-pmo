@@ -18,5 +18,8 @@ save the result to the right `knowledge/` location. Keep these generic; project-
 | `persona.md` | `/run-discovery` | discovery artifact / `knowledge/` |
 | `okr.md` | `/define-strategy`, `/review-okrs` | `knowledge/product-context.md` |
 | `exec-update.md` | `/make-deliverable` | the deliverable artifact |
+| `portfolio-report.md` | `/track-portfolio` | `knowledge/portfolio/` |
+| `dashboard-spec.md` | `/design-dashboard` | `knowledge/portfolio/` |
+| `automation-spec.md` | `/plan-portfolio-automation` | `knowledge/portfolio/` |
 
 All artifacts follow `standards/document-standards.md` (header, lead with the decision, state assumptions).

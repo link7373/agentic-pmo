@@ -12,17 +12,17 @@ persisted across sessions.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Built for](https://img.shields.io/badge/Built%20for-Claude%20Code-8A2BE2.svg)
-![Agents](https://img.shields.io/badge/Agents-12-blue.svg)
-![Skills](https://img.shields.io/badge/Skills-17-blue.svg)
+![Agents](https://img.shields.io/badge/Agents-13-blue.svg)
+![Skills](https://img.shields.io/badge/Skills-21-blue.svg)
 
 ---
 
 ## Why this exists
 
 A real PMO is a team of specialists working a shared operating rhythm: strategists, product managers,
-owners, researchers, analysts, project and program managers, scrum masters, release managers. This kit
-recreates that team as **12 role-based agents** coordinated by a **Head of PMO** orchestrator, driven by
-**17 plain-English workflows**, and anchored by a **persistent memory** so decisions and context survive
+owners, researchers, analysts, project, program and portfolio managers, scrum masters, release managers. This
+kit recreates that team as **13 role-based agents** coordinated by a **Head of PMO** orchestrator, driven by
+**21 plain-English workflows**, and anchored by a **persistent memory** so decisions and context survive
 across sessions.
 
 You talk to it in business English — *"build me a roadmap," "write a PRD for X," "plan the next sprint,"
@@ -36,8 +36,8 @@ flowchart TD
     A(["👤 You · plain English"]) -->|"fill in once"| B["📋 START-HERE.md — the charter"]
     B -->|"/setup-pmo"| M
     A -->|"requests"| M{{"🧭 Head of PMO — orchestrator (CLAUDE.md)"}}
-    M --> SK[/"17 Skills · workflows"/]
-    SK --> AG["👥 12 Role Agents — product · delivery · cross-cutting"]
+    M --> SK[/"21 Skills · workflows"/]
+    SK --> AG["👥 13 Role Agents — product · delivery · cross-cutting"]
     AG --> ME[("📚 Methods library")]
     AG --> ST[("📐 Standards")]
     AG --> KN[("🧠 knowledge/ — source of truth")]
@@ -55,9 +55,9 @@ flowchart TD
 | Part | What it is |
 |------|------------|
 | 🧭 **Orchestrator** (`CLAUDE.md`) | The Head of PMO — routes requests, sequences multi-step work, runs the operating rhythm, owns final QA. |
-| 👥 **Agents** (`.claude/agents/`) | 12 specialists, each scoped to a role with its own method playbook. |
-| ⚙️ **Skills** (`.claude/skills/`) | 17 slash-command workflows that do the actual jobs. |
-| 🧠 **Knowledge** (`knowledge/`) | Persistent memory — product context, roadmap, backlog, RAID, intake, decisions. The **source of truth**. |
+| 👥 **Agents** (`.claude/agents/`) | 13 specialists, each scoped to a role with its own method playbook. |
+| ⚙️ **Skills** (`.claude/skills/`) | 21 slash-command workflows that do the actual jobs. |
+| 🧠 **Knowledge** (`knowledge/`) | Persistent memory — product context, roadmap, backlog, portfolio, RAID, intake, decisions. The **source of truth**. |
 | 📚📐 **Methods & Standards** | A reusable library of techniques (`knowledge/methods/`) and house style (`standards/`). |
 
 ## Quick start
@@ -101,7 +101,7 @@ flowchart LR
     RV -. "informs next cycle" .-> R
 ```
 
-## The team — 12 agents
+## The team — 13 agents
 
 **Product**
 
@@ -120,6 +120,7 @@ flowchart LR
 |-------|------|
 | `project-manager` | Project plans, WBS, schedule, scope & change control, RAID, status |
 | `program-manager` | Cross-project coordination, dependencies, portfolio sequencing, capacity |
+| `portfolio-analyst` | The portfolio data layer: register, status-intake quality gates, demand & capacity analytics, cross-portfolio collisions, dashboard & automation specs |
 | `scrum-master` | Ceremony facilitation, impediment removal, team health, agile metrics |
 | `release-manager` | Release planning, launch/GTM readiness, rollout & change management |
 
@@ -130,7 +131,7 @@ flowchart LR
 | `delivery-monitor` | Status/velocity/burndown tracking, risk & anomaly surfacing, RAID & scorecards |
 | `comms-lead` | Stakeholder & executive communications, audience-tailored deliverables |
 
-## The workflows — 17 skills
+## The workflows — 21 skills
 
 | Skill | What it does | Lead agent |
 |-------|--------------|------------|
@@ -148,6 +149,10 @@ flowchart LR
 | `/plan-capacity` | Balance load across teams; sequencing & trade-offs | program-manager + scrum-master |
 | `/plan-project` | Scope, WBS, schedule, dependencies, RAID | project-manager |
 | `/track-status` | RAG status, velocity/burndown, RAID update | delivery-monitor → comms-lead |
+| `/review-portfolio-intake` | Quality-gate PM/PgM submissions; confidence per item | portfolio-analyst |
+| `/track-portfolio` | Portfolio rollup: themes, collisions, capacity, two-tier report | portfolio-analyst + delivery-monitor → comms-lead |
+| `/design-dashboard` | Spec a portfolio dashboard: model, measures, drill paths | portfolio-analyst + comms-lead |
+| `/plan-portfolio-automation` | Spec status-intake & data-flow automation | portfolio-analyst |
 | `/run-ceremony` | Facilitate planning / standup / review / retro | scrum-master |
 | `/plan-launch` | Rollout strategy, readiness, go/no-go | release-manager |
 | `/make-deliverable` | Audience-tailored exec/board/status communication | comms-lead |
@@ -158,25 +163,25 @@ A shared, reusable set of techniques every agent draws on (`knowledge/methods/`)
 
 `product-strategy` · `lean-product-process` · `discovery-and-validation` · `prioritization-frameworks` ·
 `requirements-and-stories` · `business-analysis` · `agile-scrum-mechanics` · `project-management` ·
-`roadmapping` · `launch-and-gtm` · `metrics-and-experimentation`
+`portfolio-management` · `roadmapping` · `launch-and-gtm` · `metrics-and-experimentation`
 
 ## Memory & the operating rhythm
 
 The PMO remembers. Everything lives in `knowledge/` as the single source of truth:
 
 - **Context:** `product-context.md`, `stakeholder-map.md`, `cadence.md`, `glossary.md`
-- **Work:** `roadmap.md`, `backlog.md`, `intake.md` (the front door), `raid-log.md`
-- **Artifacts:** `prds/`, `sprints/`, `projects/`, `launches/`, `ceremonies/`
+- **Work:** `roadmap.md`, `backlog.md`, `intake.md` (the front door), `raid-log.md`, `portfolio.md` (the register)
+- **Artifacts:** `prds/`, `sprints/`, `projects/`, `launches/`, `ceremonies/`, `portfolio/`
 - **Governance:** `decision-log.md` (a traceable record of consequential decisions)
-- **Cadence:** `operating-rhythm.md` — what happens daily / weekly / per-sprint / per-quarter, each step
+- **Cadence:** `operating-rhythm.md` — what happens daily / weekly / per-sprint / monthly / per-quarter, each step
   tied to the skill that performs it. The Head of PMO runs this rhythm, not just one-off requests, and the
   recurring items can be automated with scheduled routines.
 
 ## Templates
 
 Every deliverable starts from a fill-in template in [`templates/`](templates/README.md) — PRD, status
-report, sprint plan, project plan, launch plan, persona, OKRs, and executive update — so output is
-consistent and fast.
+report, sprint plan, project plan, launch plan, persona, OKRs, executive update, portfolio report, dashboard
+spec, and automation spec — so output is consistent and fast.
 
 ## Standards
 
@@ -210,14 +215,14 @@ agentic-pmo/
 ├─ README.md
 ├─ LICENSE · .gitignore · .gitattributes
 ├─ .claude/
-│  ├─ agents/               # 12 role sub-agents
-│  └─ skills/               # 17 slash-command workflows
+│  ├─ agents/               # 13 role sub-agents
+│  └─ skills/               # 21 slash-command workflows
 ├─ knowledge/               # persistent memory — source of truth
 │  ├─ product-context.md · stakeholder-map.md · roadmap.md · backlog.md
-│  ├─ raid-log.md · cadence.md · intake.md · glossary.md
+│  ├─ raid-log.md · cadence.md · intake.md · glossary.md · portfolio.md
 │  ├─ operating-rhythm.md · integrations.md · decision-log.md
-│  ├─ methods/              # 11 reusable technique files
-│  └─ prds/ sprints/ projects/ launches/ ceremonies/   # generated artifacts
+│  ├─ methods/              # 12 reusable technique files
+│  └─ prds/ sprints/ projects/ launches/ ceremonies/ portfolio/   # generated artifacts
 ├─ templates/               # fill-in deliverable templates
 ├─ standards/               # document · communication · agile house style
 └─ examples/                # worked sample product ("Cadence")
