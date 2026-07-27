@@ -1,4 +1,4 @@
-# Sample dashboard — `Portfolio_Sample`
+# Sample dashboard — `Sample`
 
 A working Power BI portfolio dashboard, built as a PBIP project by `/powerbi`, for checking that the capability
 renders end to end on your machine. **The data is fictional** — six invented projects across two programs, six
@@ -24,7 +24,7 @@ Restart Desktop. If a project doesn't open and you skipped this, that's the reas
 ## Open it
 
 ```bash
-start examples/sample-dashboard/Portfolio_Sample/Portfolio_Sample.pbip
+start examples/sample-dashboard/Sample/Sample.pbip
 ```
 
 Then **Refresh** to load the inline data.
@@ -56,9 +56,9 @@ The data tells a deliberate story. `Core_Ledger_Uplift`'s milestone hit rate sli
 period 6. That's the watermelon pattern the intake contract in `knowledge/methods/portfolio-management.md` exists
 to catch — green outside, red inside, and visible in the trend long before the status colour admits it.
 
-> Card totals are computed from the source data in `build_sample.py`, not read off a rendered report. If a card
-> disagrees with the table above, that's a finding worth telling me about — it means the model aggregates
-> differently than the arithmetic predicts.
+> These totals were computed from the source data in `build_sample.py` **and** confirmed against the rendered
+> report. If a card ever disagrees with this table, the model is aggregating differently than the arithmetic
+> predicts — which is a real defect, not a rounding quirk.
 
 ## What is and isn't verified
 
@@ -100,6 +100,19 @@ preview features.
   link, so the hard rule is never to generate one. The two `PBIP005` warnings are the correct outcome, not a
   defect. Fabric or Desktop creates them if you ever connect this to a workspace.
 - **Auto date/time** should be off (**Options → Data Load**). It generates a hidden date table per date column.
+
+## Long paths on Windows
+
+PBIP nests deeply, and Windows enforces a 260-character path limit. The longest path here is 129 characters, so
+a clone anywhere sane is fine — but if `git clone` fails with **`Filename too long`**, or checkout half-completes:
+
+```bash
+git config --global core.longpaths true
+```
+
+Then re-clone, or `git restore --source=HEAD :/` to finish the checkout. This is why the project folder is called
+`Sample` and not something descriptive: every character is paid again in each nested visual path. It's also why
+real dashboards live in `dashboards/` at the repo root rather than under `knowledge/`.
 
 ## Regenerating
 

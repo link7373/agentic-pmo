@@ -18,7 +18,7 @@ looks like, then delete or ignore.
 A real, openable PBIP project, for checking the Power BI capability renders end to end on your machine.
 - `SPEC.md` — what `/design-dashboard` produces, using `templates/dashboard-spec.md`.
 - `build_sample.py` — the generator; re-run it to rebuild the project from scratch.
-- `Portfolio_Sample/` — the built project: TMDL semantic model, PBIR pages and visuals, theme.
+- `Sample/` — the built project: TMDL semantic model, PBIR pages and visuals, theme.
 
 **Start with [`sample-dashboard/README.md`](sample-dashboard/README.md)** — three Power BI preview features must
 be enabled first or the project won't open, and it lists the exact card values to expect so you can tell

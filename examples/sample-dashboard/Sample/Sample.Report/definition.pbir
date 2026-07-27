@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Portfolio_Sample.SemanticModel"
+      "path": "../Sample.SemanticModel"
     }
   }
 }

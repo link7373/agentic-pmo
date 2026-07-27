@@ -1,4 +1,4 @@
-# Dashboard Spec: Portfolio_Sample
+# Dashboard Spec: Sample
 Tier: tactical   ·   Owner: portfolio-analyst   ·   Date: 2026-07-27
 Status: built   ·   Target platform: Power BI
 
@@ -119,7 +119,7 @@ low-confidence rows — a number built from three doubtful submissions must say 
 ## Handoff
 - **Build route:** `/powerbi` (in-kit).
 - **Capability tier available:** full project authoring — Power BI Desktop plus Python 3.12.
-- **Project location:** `examples/sample-dashboard/Portfolio_Sample/`. Real surfaces go in `dashboards/`.
+- **Project location:** `examples/sample-dashboard/Sample/`. Real surfaces go in `dashboards/`.
 - **Not done until:** it renders in Desktop, every number reconciles, and the empty state and a single-category
   filter are tested. **Validation only proves the files are well-formed.**
 - **Open questions blocking the build:** none.

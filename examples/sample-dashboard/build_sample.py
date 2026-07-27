@@ -3,7 +3,7 @@
 
     python examples/sample-dashboard/build_sample.py [dest]
 
-Default dest is `Portfolio_Sample/` beside this script. Re-running replaces it,
+Default dest is `Sample/` beside this script. Re-running replaces it,
 so the project is reproducible rather than a artifact nobody can regenerate.
 
 Everything is written from Python with encoding="utf-8" and newline="\\n" —
@@ -29,7 +29,12 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-NAME = "Portfolio_Sample"
+# Deliberately short. PBIP nests deeply and Windows still enforces a
+# 260-character path limit, so every character in the project name is paid
+# again in `<NAME>/<NAME>.Report/definition/pages/<page>/visuals/<visual>/`.
+# A doubled long name here is what pushes a clone over the limit on a
+# corporate OneDrive path. See README, "If something still fails".
+NAME = "Sample"
 
 S = "https://developer.microsoft.com/json-schemas/fabric/item/report"
 V_VERSION = "2.0.0"                    # the *value* inside version.json
