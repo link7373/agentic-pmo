@@ -14,6 +14,11 @@ consistent, scannable, and decision-ready. Adjust the specifics during `/setup-p
 - **Link, don't duplicate.** Reference the relevant `knowledge/` file as the source of truth instead of copying.
 - **Date and own it.** Every artifact has a title, date, owner (agent), and status.
 - **Plain language.** Define acronyms on first use; prefer concrete nouns and active voice.
+- **Empty-scaffold protocol.** If a `knowledge/` file you need is empty or header-only, say so plainly, name
+  the skill that populates it (e.g., "`knowledge/financials.md` has no cost baseline — run
+  `/build-business-case` or `/track-financials`"), and proceed only on assumptions you mark as assumptions.
+  Never fabricate content to fill a scaffold, and never present a derived figure as if the underlying data
+  existed.
 
 ## Standard artifact header
 ```
@@ -30,6 +35,15 @@ Links: <related knowledge/ files, upstream artifacts>
 - **Status report** — RAG with reason + action; lead with decisions/help needed; include top risks/issues.
 - **Sprint plan** — one clear Sprint Goal, selected items, capacity, and commitments.
 - **Project plan** — scope (in/out), milestones, dependencies, RAID summary, key dates.
+- **Business case** — problem, options considered (including do-nothing), costs, quantified benefits with
+  their owner and measurement method, ROI/payback, risks, and the recommendation. Every number is labelled
+  estimate or measured.
+- **Change request** — the change, why now, impact on scope/schedule/cost/risk stated separately, options,
+  recommendation, and the approver. No CR is "approved" without a named approver and a date.
+- **Gate review** — the gate's entry criteria, evidence against each, unresolved items, and one of
+  go / go-with-conditions / hold / kill with named conditions and owner.
+- **Closure report** — what was delivered vs. baselined scope, final schedule and cost variance, benefits
+  handoff (who tracks what, from when), open items and where they went, and lessons learned.
 - **Decision** — logged to `knowledge/decision-log.md` (see format below).
 
 ## Decision log entry format

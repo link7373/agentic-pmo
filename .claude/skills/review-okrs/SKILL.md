@@ -25,7 +25,8 @@ Mid-cycle OKR check-in, or end-of-cycle grading before setting the next cycle's 
 `knowledge/methods/product-strategy.md` (OKRs), `knowledge/methods/metrics-and-experimentation.md`.
 
 ## Output
-Updated OKRs in `knowledge/product-context.md` with grades/learnings; log the review outcome and any
+Use `templates/okr.md` as the structure for the graded OKR tables. Updated OKRs in
+`knowledge/product-context.md` with grades/learnings; log the review outcome and any
 strategy implications to `knowledge/decision-log.md`. Feeds `/define-strategy` for the next cycle.
 Follow `standards/document-standards.md`.
 

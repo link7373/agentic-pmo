@@ -110,7 +110,10 @@ misses three cycles is a portfolio risk, not an admin nuisance.
 Run on a regular cycle (monthly suits most organizations — long enough to change, short enough to steer):
 
 1. **Establish supply.** Available capacity by team or role — headcount, adjusted for leave, run/support load,
-   and a realistic productive fraction. Supply is a range, not a number.
+   and a realistic productive fraction. Supply is a range, not a number. The register of people, roles,
+   allocations and vendors is `knowledge/resources.md`, owned by `resource-manager`; the deduction discipline
+   and the reason nominal headcount overstates capacity are in [[resource-management]]. Keep supply and demand
+   in separate units — a capacity figure that mixes team velocity with named-person FTE means nothing.
 2. **Collect demand.** Estimated effort by period from each in-flight and approved item, plus a view of the
    assessed pipeline. Estimates state confidence and get refined as items mature.
 3. **Compare and find the constraint.** Where demand exceeds supply, and — more usefully — *which specific
@@ -230,6 +233,10 @@ its measure, and the date it should be observable; at the benefits review, compa
 arrived and feed the delta back into estimating and prioritization. A portfolio that never checks whether its
 completed work produced value is optimizing throughput of output, not outcomes.
 
+The benefits register lives in `knowledge/financials.md`, seeded by `/build-business-case`, reviewed by
+`/track-financials`, and handed to a named owner at `/close-project`. Benefit types, the productivity-savings
+trap, and why a benefit needs a baseline taken *before* the change are in [[financial-management]].
+
 ## Quality checklist
 
 - [ ] Every register row has an owner, a strategic link, a next milestone, and a confidence level.
@@ -246,4 +253,4 @@ completed work produced value is optimizing throughput of output, not outcomes.
 
 ## Related methods
 - [[project-management]] · [[agile-scrum-mechanics]] · [[roadmapping]] · [[metrics-and-experimentation]] ·
-  [[prioritization-frameworks]]
+  [[prioritization-frameworks]] · [[resource-management]] · [[financial-management]] · [[governance-and-change]]

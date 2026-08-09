@@ -11,7 +11,7 @@ The bootstrap workflow. Turns the filled-in `START-HERE.md` charter into a worki
 - First time setting up the PMO, or after the user edits `START-HERE.md`.
 
 ## Steps
-1. **Read the charter.** Parse all 8 sections of `START-HERE.md`. Note blanks and "no idea" answers.
+1. **Read the charter.** Parse all 9 sections of `START-HERE.md`. Note blanks and "no idea" answers.
 2. **Clarify gaps.** Ask only about gaps that block setup (e.g., target customer, methodology, top goal).
    For everything else, apply sensible defaults and record them as assumptions.
 3. **Confirm process conventions.** Reconcile the charter's process/cadence answers with
@@ -24,10 +24,18 @@ The bootstrap workflow. Turns the filled-in `START-HERE.md` charter into a worki
    - `knowledge/operating-rhythm.md` — confirm/adjust the cadence to match the team's process answers.
    - `knowledge/roadmap.md`, `knowledge/backlog.md`, `knowledge/raid-log.md`, `knowledge/intake.md` —
      initialize empty with headers.
+   - `knowledge/governance.md` — record gate/steerco cadence, escalation matrix, and risk appetite from
+     the charter's section 9 (apply defaults and mark them as assumptions if blank).
+   - `knowledge/financials.md`, `knowledge/resources.md` — seed budget/funding and team/roles answers from
+     section 9; leave the registers empty if unknown.
+   - `knowledge/change-log.md`, `knowledge/lessons-learned.md`, `knowledge/metrics.md` — initialize empty
+     with headers.
    - `knowledge/integrations.md` — record any tools named and whether sync is desired (default: file-only).
    - `knowledge/decision-log.md` — log the setup decisions and assumptions made.
-   - **Create the artifact output directories** (each already holds a README): `knowledge/prds/`,
-     `knowledge/sprints/`, `knowledge/projects/`, `knowledge/launches/`, `knowledge/ceremonies/`.
+   - **Verify the artifact output directories exist** (each ships with a README): `knowledge/prds/`,
+     `knowledge/sprints/`, `knowledge/projects/`, `knowledge/launches/`, `knowledge/ceremonies/`,
+     `knowledge/portfolio/`, `knowledge/discovery/`, `knowledge/status/`, `knowledge/capacity/`,
+     `knowledge/deliverables/`, `knowledge/programs/`, `knowledge/financials/`.
 5. **(Optional) Test integrations.** If the user wants tool sync and a connector is available, verify access.
    If not configured, confirm the PMO runs file-only (the default) and move on.
 6. **Report readiness.** Summarize what was seeded, which assumptions you made, and the next actions the user

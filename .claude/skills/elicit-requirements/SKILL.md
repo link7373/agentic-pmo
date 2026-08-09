@@ -34,8 +34,9 @@ scope/change impact.
 `knowledge/methods/discovery-and-validation.md`, `knowledge/methods/prioritization-frameworks.md`.
 
 ## Output
-A requirements/analysis package saved at `knowledge/prds/<YYYY-MM-DD>-<feature>-analysis.md` (or as a section
-feeding `/write-prd`); log scope/solution decisions to `knowledge/decision-log.md`. Follow
+Start from `templates/requirements-package.md`. Save the package at
+`knowledge/prds/<YYYY-MM-DD>-<feature>-analysis.md` (or as a section feeding `/write-prd`); log scope/solution
+decisions to `knowledge/decision-log.md`. Follow
 `standards/document-standards.md` — classify requirements, make non-functional targets measurable, and keep
 everything traceable to a need.
 

@@ -17,10 +17,17 @@ about risk, and impossible to misread.
 - `knowledge/methods/project-management.md` — status/RAG and stakeholder context.
 
 ## Knowledge you read/write
-- Read: `knowledge/stakeholder-map.md`, `knowledge/product-context.md`, status from `delivery-monitor`,
-  roadmap, and whatever substance the relevant agent produced.
-- Write/update: stakeholder deliverables (updates, decks, announcements); note communication decisions in
-  `knowledge/decision-log.md` only when consequential.
+- Read: `knowledge/stakeholder-map.md`, `knowledge/product-context.md`, `knowledge/status/` (from
+  `delivery-monitor`), `knowledge/portfolio/`, `knowledge/financials.md`, `knowledge/roadmap.md`, and whatever
+  substance the relevant agent produced.
+- Write/update: stakeholder deliverables to `knowledge/deliverables/` as `YYYY-MM-DD-<audience>-<topic>.md`,
+  starting from `templates/exec-update.md`, `templates/status-report.md`, or `templates/steerco-pack.md`
+  depending on audience; note communication decisions in `knowledge/decision-log.md` only when consequential.
+
+**Deliverables are renderings, not sources.** Every number traces back to a `knowledge/` file; nothing is first
+stated in a deliverable. If you need a fact that doesn't exist upstream, send it back to the agent that owns
+it rather than deriving it here. Circulated deliverables are never edited — supersede them with a new dated
+file so the record of what was said, and when, stays intact.
 
 ## How you work
 1. Identify the audience and the decision/action they need before writing.

@@ -17,9 +17,17 @@ clearing impediments, and continuously improving how the team works.
 - `knowledge/methods/requirements-and-stories.md` — to keep stories ready and well-formed.
 
 ## Knowledge you read/write
-- Read: `knowledge/backlog.md`, `knowledge/cadence.md`, current sprint plan, `knowledge/raid-log.md`.
-- Write/update: sprint plans, ceremony artifacts (planning output, standup notes, review notes, retro actions),
-  team-health and agile metrics; log process improvements/decisions to `knowledge/decision-log.md`.
+- Read: `knowledge/backlog.md`, `knowledge/cadence.md`, current sprint plan, `knowledge/raid-log.md`,
+  `knowledge/lessons-learned.md` (before a retro — patterns already known).
+- Write/update: sprint plans to `knowledge/sprints/`; ceremony artifacts to `knowledge/ceremonies/` as
+  `YYYY-MM-DD-<type>.md` (retros from `templates/retro.md`); team-health and agile metrics to
+  `knowledge/status/` as `YYYY-MM-DD-<team>-health.md`; durable retro lessons appended to
+  `knowledge/lessons-learned.md`; impediments to `knowledge/raid-log.md`; log process decisions to
+  `knowledge/decision-log.md`.
+
+**Retro output never lives only in the ceremony notes.** Improvement actions become backlog items or owned
+tasks with dates, and lessons with value beyond this team go to `knowledge/lessons-learned.md`. An action list
+nobody revisits teaches the team that retros don't matter.
 
 ## How you work
 1. Facilitate each event to its purpose (planning sets one Sprint Goal; retro yields specific, owned actions).

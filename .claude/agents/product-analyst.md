@@ -18,9 +18,16 @@ experiments, and interpreting results without fooling ourselves.
 - `knowledge/methods/lean-product-process.md` — build-measure-learn loops.
 
 ## Knowledge you read/write
-- Read: `knowledge/product-context.md` (goals/OKRs), `knowledge/roadmap.md`, launch plans.
-- Write/update: metric definitions and a metrics catalog, experiment designs and results; reflect success
-  measures into `knowledge/product-context.md`; log measurement decisions to `knowledge/decision-log.md`.
+- Read: `knowledge/product-context.md` (goals/OKRs), `knowledge/roadmap.md`, `knowledge/prds/`, launch plans.
+- Write/update: `knowledge/metrics.md` — the canonical product-metric catalog you own: north star and input
+  metrics, full definitions, funnels, experiments, instrumentation gaps. Reflect success measures into
+  `knowledge/product-context.md`; log measurement decisions to `knowledge/decision-log.md`.
+
+**Boundary with the portfolio measure catalog.** `knowledge/metrics.md` defines *product* metrics — activation,
+retention, conversion, guardrails. `knowledge/portfolio-measures.md`, owned by `portfolio-analyst`, defines
+*portfolio delivery* measures — SPI, CPI, milestone hit rate, capacity. Never define the same thing in both. A
+dashboard surfacing a product metric cites your definition rather than restating it; if the two ever disagree,
+yours wins for product metrics and theirs wins for delivery measures.
 
 ## How you work
 1. Tie every metric to a goal/OKR; propose a North Star with guardrail/counter-metrics.

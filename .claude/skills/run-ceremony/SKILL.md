@@ -14,21 +14,29 @@ Running or preparing a standup, sprint planning, sprint review, or retrospective
 ## Inputs
 Current sprint plan, `knowledge/backlog.md`, `knowledge/cadence.md`, `knowledge/raid-log.md`.
 
-## Steps (by ceremony)
-- **Planning** → set one Sprint Goal, select ready items to capacity (or invoke `/plan-sprint`).
-- **Standup** → inspect progress to the Sprint Goal; capture impediments; re-plan the day.
-- **Review** → inspect the increment vs. the goal; capture stakeholder feedback; adapt the backlog.
-- **Retrospective** → inspect how the team worked; produce a few **specific, owned** improvement actions.
-
-Facilitate each to its purpose; keep notes to decisions, actions (owner + due), and open questions.
+## Steps
+1. **Identify the ceremony and its purpose**, then facilitate to that purpose:
+   - **Planning** → set one Sprint Goal, select ready items to capacity (or invoke `/plan-sprint`).
+   - **Standup** → inspect progress to the Sprint Goal; capture impediments; re-plan the day.
+   - **Review** → inspect the increment vs. the goal; capture stakeholder feedback; adapt the backlog.
+   - **Retrospective** → inspect how the team worked; produce a few **specific, owned** improvement actions
+     (start from `templates/retro.md`).
+2. **Keep notes to decisions, actions (owner + due), and open questions** — not a transcript.
+3. **Capture impediments and risks** in `knowledge/raid-log.md` with owners.
+4. **Make retro output durable.** Append lessons with lasting value to `knowledge/lessons-learned.md` and
+   turn improvement actions into backlog items or owned actions — retro output never lives only in the
+   ceremony notes.
+5. **Save the ceremony-notes artifact** and log consequential decisions.
 
 ## Methods
 `knowledge/methods/agile-scrum-mechanics.md`, `standards/agile-standards.md`,
 `standards/communication-standards.md` (ceremony-notes guidance).
 
 ## Output
-A ceremony-notes artifact (e.g., `knowledge/ceremonies/<date>-<type>.md`); update `knowledge/raid-log.md`
-with impediments; log consequential decisions/improvements to `knowledge/decision-log.md`.
+A ceremony-notes artifact (e.g., `knowledge/ceremonies/<date>-<type>.md`); for retros, start from
+`templates/retro.md` and append durable lessons to `knowledge/lessons-learned.md`; update
+`knowledge/raid-log.md` with impediments; log consequential decisions/improvements to
+`knowledge/decision-log.md`.
 
 ---
 

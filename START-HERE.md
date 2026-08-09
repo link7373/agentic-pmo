@@ -102,6 +102,22 @@ _Your answer here..._
 
 _Your answer here..._
 
+## 9. Money, People & Governance
+*Who approves what, and what are we working with?* "No idea" is a fine answer to any of these — sensible
+defaults get applied and recorded as assumptions.
+
+- **Budget** — is there one? Roughly what size, and who approves spend? At what amount does someone more
+  senior have to say yes?
+- **People** — what roles and rough headcount do you have, and any contractors or vendors? Is there a role or
+  a person everything seems to wait on?
+- **Approval points** — do projects pass through any formal gates or reviews before they proceed (funding,
+  build, launch)? Is there a steering committee, and how often does it meet?
+- **Risk appetite** — in plain English, where is the organization cautious and where is it willing to take a
+  chance? (E.g. "we'll take schedule risk, never compliance risk.")
+- **Change** — who decides when scope, dates, or budget need to move?
+
+_Your answer here..._
+
 ---
 
 ### ✅ Done?

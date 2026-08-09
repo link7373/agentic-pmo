@@ -26,10 +26,10 @@ understand users.
 `knowledge/methods/discovery-and-validation.md`, `knowledge/methods/lean-product-process.md`.
 
 ## Output
-Discovery artifact (research plan, synthesized findings, personas — use `templates/persona.md` —, validated
-learnings); reflect key
-learnings into `knowledge/product-context.md`; log validation decisions to `knowledge/decision-log.md`.
-Follow `standards/document-standards.md`.
+A discovery artifact at `knowledge/discovery/YYYY-MM-DD-<topic>.md` — research plan, synthesized findings,
+personas (from `templates/persona.md`), validated learnings. Graduate validated learnings into
+`knowledge/product-context.md`: that file holds the conclusion, `knowledge/discovery/` holds the evidence. Log
+validation decisions to `knowledge/decision-log.md`. Follow `standards/document-standards.md`.
 
 ---
 

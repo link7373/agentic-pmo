@@ -22,32 +22,36 @@ owns **implementation only** — it does not re-derive requirements.
    `knowledge/integrations.md`. If it's Tableau or something else, stop — none of the guidance below transfers.
    If no platform is recorded, ask before building anything.
 
-2. **Detect what you can actually do.** Read `references/tooling-tiers.md` and run the detection commands.
+2. **Orient in the project format.** If this is your first pass on a project (or it was built elsewhere),
+   read `references/pbip-project-format.md` for the PBIP folder anatomy — what each file is, what Desktop
+   generates, and what must never be hand-written.
+
+3. **Detect what you can actually do.** Read `references/tooling-tiers.md` and run the detection commands.
    State the tier you're working in before you start — it determines whether you can bulk-format, publish, or
    only author files. Never install anything yourself; recommend it, say what the licence costs are, and let
    the user decide.
 
-3. **Spec before building.** Do not re-derive the requirements here — `/design-dashboard` owns the audience
+4. **Spec before building.** Do not re-derive the requirements here — `/design-dashboard` owns the audience
    tier, the one-to-three questions, the measures, the grain and model, the filters, the drill paths and the
    layout. If there is no spec at `knowledge/portfolio/dashboard-<surface>.md` yet, go write one first.
 
-4. **Build the model layer.** Star schema, exactly one dedicated date table honouring the fiscal calendar in
+5. **Build the model layer.** Star schema, exactly one dedicated date table honouring the fiscal calendar in
    `knowledge/cadence.md`, reading from the portfolio register and its cycle artifacts — no heavy
    transformation inside Power BI (`standards/powerbi-standards.md`). Author TMDL per
    `references/semantic-model-tmdl.md`; write measures per `references/dax-patterns.md`, named **exactly** as
    `knowledge/portfolio-measures.md` names them. A measure whose name or logic drifts from the catalog is a
    defect, not a variation — route conflicts back to the catalog, don't resolve them in DAX.
 
-5. **Build the report layer.** Pages and visuals per `references/pbir-visuals.md`. Chart choice, colour,
+6. **Build the report layer.** Pages and visuals per `references/pbir-visuals.md`. Chart choice, colour,
    layout, and decluttering come from `standards/dashboard-standards.md` — that file is the single source of
    truth for design and this skill does not restate or override it. Name every page and visual folder in
    `[A-Za-z0-9_-]` only; anything else is silently discarded by Desktop (`references/gotchas.md`).
 
-6. **Set the theme once.** Encode the palette, semantic status colours, and typography in a theme file rather
+7. **Set the theme once.** Encode the palette, semantic status colours, and typography in a theme file rather
    than formatting visuals individually (`references/theme-json.md`). Theme-first is what makes the design
    standard hold across every page without hand-editing each visual — and what makes a rebrand a one-file change.
 
-7. **Validate before anyone opens it.** Run the checker:
+8. **Validate before anyone opens it.** Run the checker:
    ```bash
    python .claude/skills/powerbi/scripts/validate_pbip.py dashboards/<name>
    ```
@@ -55,14 +59,14 @@ owns **implementation only** — it does not re-derive requirements.
    Triage WARNs, don't ignore them. At Tier 2+, also run `pbir validate`. For anything stakeholder-facing, hand
    off to `powerbi-validator` for an independent pass.
 
-8. **Reconcile, then ship.** Open the project in Power BI Desktop and confirm it renders — validation proves
+9. **Reconcile, then ship.** Open the project in Power BI Desktop and confirm it renders — validation proves
    the files are well-formed, only Desktop proves the report works. Cross-check every displayed number against
    the register and cycle artifacts it came from, saving the checks in `dashboards/<name>/checks/`. Test the
    empty state and a single-category filter. Screenshot into `dashboards/<name>/`, update the
    `dashboards/README.md` inventory. Publishing to a broad audience → confirm with the user first
    (`references/publishing.md`).
 
-9. **Record what you learned.** Model quirks or data oddities → the spec's open questions and
+10. **Record what you learned.** Model quirks or data oddities → the spec's open questions and
    `knowledge/portfolio.md`. Measure semantics, exclusions, fiscal handling → `knowledge/decision-log.md`,
    since a measure definition binds every other surface.
 

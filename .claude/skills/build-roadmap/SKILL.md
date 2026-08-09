@@ -21,14 +21,17 @@ cross-team sequencing; `comms-lead` for audience views.
 3. Group into outcome-oriented **themes**; sequence by value, dependency, capacity.
 4. Assign horizon/confidence — default **Now / Next / Later** (use dates only where truly required).
 5. Annotate the outcome each theme targets and key assumptions; mark committed vs. exploratory.
-6. Produce tailored views for the key audiences if requested.
+6. State the **non-goals** — what you are deliberately not doing this horizon, and when to revisit. This is
+   the most useful section for anyone deciding what to ask for.
+7. Produce tailored views for the key audiences if requested.
 
 ## Methods
 `knowledge/methods/roadmapping.md`, `knowledge/methods/prioritization-frameworks.md`,
 `knowledge/methods/product-strategy.md`.
 
 ## Output
-Update `knowledge/roadmap.md` (source of truth); log significant roadmap changes and reasons to
+Start from `templates/roadmap.md`. Update `knowledge/roadmap.md` (source of truth), including the non-goals and
+changes-since-last-version sections; log significant roadmap changes and reasons to
 `knowledge/decision-log.md`. Follow `standards/document-standards.md`.
 
 ---

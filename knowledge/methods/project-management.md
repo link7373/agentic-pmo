@@ -89,11 +89,21 @@ Derive health from them:
 A CPI of 0.8 means you're getting 80 cents of value per dollar spent — a far earlier, harder signal than a
 green status. Use EVM where a cost/schedule baseline exists; pair with burndown/velocity on adaptive work.
 
+**Where the inputs come from.** BAC, AC, EV and PV live in `knowledge/financials.md`, maintained by
+`financial-analyst` via `/track-financials`. **No cost baseline means no earned value** — where the baseline
+row is blank, report "CPI unavailable — no cost baseline" rather than deriving one from an estimate. Cost-side
+practice (baselining, forecasting, EAC choice, benefits) is in [[financial-management]].
+
 ## RAID log (risks, assumptions, issues, dependencies)
 
-The PMO's running register of what could derail delivery:
-- **Risks** — uncertain future events. Track probability × impact; assign an owner; plan response
-  (avoid / mitigate / transfer / accept) and a trigger.
+The PMO's running register of what could derail delivery, kept in `knowledge/raid-log.md`. That file states
+the **ownership and precedence rule** — who owns entries at which level and who may update what — because four
+roles write to it. Read it before editing.
+
+- **Risks** — uncertain future events. Score = probability × impact on the 1–5 scales defined in
+  `knowledge/governance.md` (so 1–25); assign an owner; plan response (avoid / mitigate / transfer / accept)
+  and a trigger. Escalation thresholds live in `knowledge/governance.md`, not here — see
+  [[governance-and-change]] for how to set and calibrate them.
 - **Assumptions** — things taken as true for planning; revisit as evidence arrives (assumptions that fail
   become risks or issues).
 - **Issues** — problems happening now; assign owner, severity, and resolution path.
@@ -114,7 +124,10 @@ Keep a small "top risks" list visible; don't let the register become a graveyard
 
 ## Change control
 Manage scope changes deliberately: capture the request, assess impact on scope/schedule/cost/risk, get the
-right approval, then update plan and baselines. Prevents silent scope creep while staying responsive.
+right approval, then **re-baseline** the plan and the cost baseline. Prevents silent scope creep while staying
+responsive. Requests are recorded in `knowledge/change-log.md` via `/manage-change`; thresholds and approvers
+come from `knowledge/governance.md`. Full practice, including the two failure modes and why the re-baseline
+step is the one that gets skipped, is in [[governance-and-change]].
 
 ## Status reporting & health
 - **RAG status** (Red / Amber / Green) for overall and per-workstream health, with the *reason* and the
@@ -144,5 +157,12 @@ avoid both under-managing (chaos) and over-managing (bureaucracy that slows valu
 - [ ] Development approach and cadence are chosen deliberately and tailored to context.
 - [ ] Estimates state confidence; reserves are explicit; progress is measured by value delivered, not effort spent.
 
+## Closing a project
+A project that fades out leaves resources uncommitted-but-unreleased, benefits unowned, and lessons
+uncaptured. Close deliberately: accept or descope every deliverable, record final actuals, hand benefits to
+named owners, resolve or transfer every open RAID entry, release resources, and capture lessons. Run
+`/close-project`; practice is in [[governance-and-change]].
+
 ## Related methods
-- [[agile-scrum-mechanics]] · [[roadmapping]] · [[launch-and-gtm]] · [[product-strategy]] · [[business-analysis]]
+- [[agile-scrum-mechanics]] · [[roadmapping]] · [[launch-and-gtm]] · [[product-strategy]] ·
+  [[business-analysis]] · [[financial-management]] · [[governance-and-change]] · [[resource-management]]

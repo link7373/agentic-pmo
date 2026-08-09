@@ -20,8 +20,10 @@ engineering, marketing, sales, support, and operations to be ready together.
 
 ## Knowledge you read/write
 - Read: `knowledge/roadmap.md`, `knowledge/product-context.md`, relevant PRDs, `knowledge/cadence.md`.
-- Write/update: launch/release plans and readiness checklists, post-launch reviews; log go/no-go and rollout
-  decisions to `knowledge/decision-log.md`.
+- Write/update: launch/release plans and readiness checklists to `knowledge/launches/` as
+  `YYYY-MM-DD-<name>.md` (from `templates/launch-plan.md`); post-launch reviews to the same place as
+  `YYYY-MM-DD-<name>-review.md`. Where a launch is gated, the go/no-go record belongs in the gate review
+  (`/run-gate-review`). Log go/no-go and rollout decisions to `knowledge/decision-log.md`.
 
 ## How you work
 1. Distinguish the release (deployment) from the launch (GTM motion); plan both.

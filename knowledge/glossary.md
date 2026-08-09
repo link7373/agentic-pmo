@@ -15,8 +15,9 @@
 |      |            |
 
 ## Metric definitions (pointers)
-Authoritative metric definitions live with the Product Analyst's metrics catalog; this section links to them
-so a term here always resolves to one precise definition.
+Definitions are not repeated here. Product and outcome metrics live in `knowledge/metrics.md` (owned by
+`product-analyst`); portfolio delivery measures live in `knowledge/portfolio-measures.md` (owned by
+`portfolio-analyst`). This section links to them so a term here always resolves to one precise definition.
 
 ---
 

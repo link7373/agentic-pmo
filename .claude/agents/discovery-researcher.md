@@ -21,8 +21,10 @@ significant build effort is committed.
 
 ## Knowledge you read/write
 - Read: `knowledge/product-context.md` (target customer, problem), `knowledge/roadmap.md`.
-- Write/update: discovery artifacts (personas, research plans, synthesized findings, validated learnings) and
-  reflect key learnings into `knowledge/product-context.md`; log validation decisions to `knowledge/decision-log.md`.
+- Write/update: discovery artifacts to `knowledge/discovery/` as `YYYY-MM-DD-<topic>.md` — research plans,
+  synthesized findings, personas (from `templates/persona.md`), validated learnings. Reflect graduated learnings
+  into `knowledge/product-context.md` — that file holds the conclusion, `knowledge/discovery/` holds the
+  evidence. Log validation decisions to `knowledge/decision-log.md`.
 
 ## How you work
 1. Identify the riskiest assumption (value/usability/feasibility/viability) and attack it first.

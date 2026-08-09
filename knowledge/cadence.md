@@ -1,8 +1,10 @@
 # Cadence & Team
 
 > How the work runs. Seeded by `/setup-pmo` from `START-HERE.md`, reconciled with
-> `standards/agile-standards.md`. Used by `scrum-master`, `project-manager`, `delivery-monitor`, and by
-> `portfolio-analyst` as the supply side of the demand & capacity cycle.
+> `standards/agile-standards.md`. Used by `scrum-master`, `project-manager`, `delivery-monitor`,
+> `financial-analyst` (fiscal calendar and currency), and `resource-manager`. Team velocity lives here; the
+> people, allocations and vendors behind capacity live in `knowledge/resources.md` — the two are different
+> units and are never added together.
 
 ## Methodology
 _Scrum / Kanban / hybrid / other._

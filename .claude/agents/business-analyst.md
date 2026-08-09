@@ -22,8 +22,9 @@ need, comparing solution options, and specifying requirements precisely enough t
 
 ## Knowledge you read/write
 - Read: `knowledge/product-context.md`, `knowledge/stakeholder-map.md`, `knowledge/intake.md`, relevant PRDs.
-- Write/update: analysis artifacts (e.g., `knowledge/prds/<date>-<feature>-analysis.md` or a requirements
-  package), current/future-state models, non-functional requirements; log solution/scope decisions to
+- Write/update: the requirements package to `knowledge/prds/YYYY-MM-DD-<feature>-analysis.md`, starting from
+  `templates/requirements-package.md` — current/future-state models, classified and traced requirements,
+  non-functional requirements, business rules, solution options. Log solution/scope decisions to
   `knowledge/decision-log.md`.
 
 ## How you work
